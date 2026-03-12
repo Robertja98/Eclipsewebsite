@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRM Dashboard | Eclipse Water Technologies</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --silver: #ccc;
+      --blue: #0077cc;
+      --gray: #333;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .dashboard-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1.5rem;
+      background: var(--bg);
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .dashboard-table th, .dashboard-table td {
+      padding: 0.75rem;
+      border: 1px solid var(--silver);
+      text-align: left;
+    }
+    .dashboard-table th {
+      background: var(--blue);
+      color: #fff;
+      font-weight: 600;
+    }
+    .dashboard-table td {
+      color: var(--gray);
+    }
+    .download-btn {
+      margin-top: 1rem;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: teal;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    .btn {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    // Redirect if not authenticated
+    if (!localStorage.getItem('authToken')) {
+      window.location.href = 'login.html';
+    }
+  </script>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <img src="logo.png" alt="Eclipse Logo" class="logo" />
+        Eclipse Water Technologies
+      </a>
+      <nav>
+        <ul class="nav">
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="specs.html">Technical Specs</a></li>
+          <li><a href="case-studies.html">Case Studies</a></li>
+          <li><a class="active btn btn-small" href="dashboard.html">Dashboard</a></li>
+          <li><button class="btn" onclick="logout()">Logout</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Contact Submissions</h1>
+    <table class="dashboard-table" id="contacts-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Company</th>
+          <th>Message</th>
+          <th>Submitted At</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <a href="http://localhost:3000/api/admin/export-csv" class="download-btn" target="_blank">Download CSV</a>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Eclipse Water Technologies</strong>
+        <p>Proudly Canadian. Not affected by U.S. tariffs.</p>
+      </div>
+      <div>
+        <a href="services.html">Services</a><br />
+        <a href="industries.html">Industries</a><br />
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <p>&copy; 2025 Eclipse Water Technologies</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function logout() {
+      localStorage.removeItem('authToken');
+      window.location.href = 'login.html';
+    }
+
+    // Fetch and populate contact submissions
+    fetch('http://localhost:3000/api/admin/contacts')
+      .then(res => res.json())
+      .then(data => {
+        const tbody = document.querySelector('#contacts-table tbody');
+        data.forEach(contact => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${contact.id}</td>
+            <td>${contact.name}</td>
+            <td>${contact.email}</td>
+            <td>${contact.company}</td>
+            <td>${contact.message}</td>
+            <td>${contact.submittedAt}</td>
+          `;
+          tbody.appendChild(row);
+        });
+      })
+      .catch(err => {
+        console.error('Error loading contacts:', err);
+        const tbody = document.querySelector('#contacts-table tbody');
+        tbody.innerHTML = `<tr><td colspan="6">Failed to load data</td></tr>`;
+      });
+  </script>
+</body>
+</html>
