@@ -1,13 +1,11 @@
 /* Unified Card/Flexbox Styles for All Pages */
+/* Unified Card/Grid Styles for All Pages */
 .card, .solution-card, .profile-card, .highlight, .specs-flex-row > section {
   background: #fff;
   border-radius: 14px;
   box-shadow: 0 2px 14px rgba(0,0,0,0.08);
   border: 1px solid #e3e7ee;
   padding: 2rem 1.5rem 1.5rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
   margin-bottom: 1.5rem;
 }
 .card h3, .solution-card h3, .profile-card h3, .highlight h3 {
@@ -16,25 +14,22 @@
   margin-bottom: 0.5rem;
 }
 .cards, .solutions-cards, .profile-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   justify-content: center;
   margin: 2rem 0;
 }
-.cards > .card, .solutions-cards > .solution-card, .profile-grid > .profile-card {
-  flex: 1 1 320px;
-  min-width: 280px;
-  max-width: 400px;
-}
 @media (max-width: 900px) {
   .cards, .solutions-cards, .profile-grid {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
   }
-  .cards > .card, .solutions-cards > .solution-card, .profile-grid > .profile-card {
-    max-width: 95vw;
+}
+@media (max-width: 720px) {
+  .cards, .solutions-cards, .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
 :root{
@@ -135,8 +130,25 @@ body{
 .quote blockquote{font-family:'Merriweather',serif;font-size:1.1rem;text-align:center;padding:1rem 0;color:#1a2a3a}
 
 .site-footer{background:var(--blue);color:#fff;margin-top:2.5rem}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:1rem;padding:1rem 0}
-.site-footer a{color:#cde9ff;text-decoration:none}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.site-footer a {
+  color: #cde9ff;
+  text-decoration: none;
+}
+.site-footer a:hover {
+  text-decoration: underline;
+}
+.footer-grid img {
+  height: 24px;
+  width: 24px;
+  vertical-align: middle;
+}
 
 /* Responsive */
 @media (max-width: 1000px){
