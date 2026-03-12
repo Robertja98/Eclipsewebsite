@@ -56,7 +56,7 @@
     <article class="card">
       <h3>Results</h3>
       <p>Regeneration frequency was reduced from every 30 days to every 6 weeks, improving uptime and lowering service costs. The plant now operates with greater confidence and fewer disruptions.</p>
-      <a class="link" href="contact.html">Optimize your DI system →</a>
+        <a class="link" href="contact.php">Optimize your DI system →</a>
     </article>
   </section>
 
@@ -64,7 +64,7 @@
     <div class="container">
       <h2>Struggling with frequent resin changes?</h2>
       <p>We’ll help you right-size your system and extend your service intervals without compromising water quality.</p>
-      <a href="contact.html" class="btn">Request a Consultation</a>
+        <a href="contact.php" class="btn">Request a Consultation</a>
     </div>
   </section>
 
@@ -75,10 +75,10 @@
         <p>Proudly Canadian. Not affected by U.S. tariffs.</p>
       </div>
       <div>
-        <a href="services.html">Services</a><br />
-        <a href="industries.html">Industries</a><br />
-        <a href="case-studies.html">Case Studies</a><br />
-        <a href="contact.html">Contact</a>
+          <a href="services.php">Services</a><br />
+          <a href="industries.php">Industries</a><br />
+          <a href="case-studies.php">Case Studies</a><br />
+          <a href="contact.php">Contact</a>
       </div>
       <div class="social-links">
         <a href="https://www.facebook.com/eclipsewatertech" target="_blank" aria-label="Facebook">

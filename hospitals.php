@@ -56,7 +56,7 @@
     <article class="card">
       <h3>Results</h3>
       <p>Water quality now consistently exceeds 16–18 MegOhm across all sites. Equipment performance has improved, and service disruptions have been eliminated. Facilities report smoother inspections and reduced maintenance costs.</p>
-      <a class="link" href="contact.html">Explore hospital-grade DI service →</a>
+      <a class="link" href="contact.php">Explore hospital-grade DI service →</a>
     </article>
   </section>
 
@@ -64,7 +64,7 @@
     <div class="container">
       <h2>Need reliable DI water for your healthcare facility?</h2>
       <p>We’ll help you design a service-backed solution that meets purity, compliance, and uptime requirements.</p>
-      <a href="contact.html" class="btn">Request a Consultation</a>
+      <a href="contact.php" class="btn">Request a Consultation</a>
     </div>
   </section>
 
@@ -75,10 +75,10 @@
         <p>Proudly Canadian. Not affected by U.S. tariffs.</p>
       </div>
       <div>
-        <a href="services.html">Services</a><br />
-        <a href="industries.html">Industries</a><br />
-        <a href="case-studies.html">Case Studies</a><br />
-        <a href="contact.html">Contact</a>
+        <a href="services.php">Services</a><br />
+        <a href="industries.php">Industries</a><br />
+        <a href="case-studies.php">Case Studies</a><br />
+        <a href="contact.php">Contact</a>
       </div>
       <div class="social-links">
         <a href="https://www.facebook.com/eclipsewatertech" target="_blank" aria-label="Facebook">

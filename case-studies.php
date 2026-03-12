@@ -46,23 +46,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">
-        <img src="Eclipselogo2026.png" alt="Eclipse Water Technologies Logo" class="logo" />
-      </a>
-      <nav>
-        <ul class="nav">
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="industries.html">Industries</a></li>
-          <li><a href="specs.html">Technical Specs</a></li>
-          <li><a class="active btn btn-small" href="case-studies.html">Case Studies</a></li>
-          <li><a href="contact.html" class="btn btn-small">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <?php include 'navbar.php'; ?>
   <section class="hero hero-sub">
     <div class="container">
       <h1>Canadian Water Treatment Success Stories</h1>
@@ -73,17 +57,17 @@
     <div class="card">
       <h3>Labratory Application – Toronto, ON</h3>
       <p>Installed a DI system with carbon pre-filtration. Reduced downtime by 40% and improved rinse purity to 18 MΩ.</p>
-      <a href="labratoryusecase.html" class="link">Read More →</a>
+      <a href="labratoryusecase.php" class="link">Read More →</a>
     </div>
     <div class="card">
       <h3>Metal Finishing Application, Toronto-ON</h3>
       <p>Optimization of SDI system to reduce frequency of regeneration.</p>
-      <a href="metalfinishing.html" class="link">Read More →</a>
+      <a href="metalfinishing.php" class="link">Read More →</a>
     </div>
     <div class="card">
       <h3>Hospital Applications Eastern Ontario</h3>
       <p>DI water system reduction and frequency in regeneration.</p>
-      <a href="hospitals.html" class="link">Read More →</a>
+      <a href="hospitals.php" class="link">Read More →</a>
     </div>
     <!-- If there are more case studies in the original, insert them here in the same card format -->
   </section>
@@ -91,7 +75,7 @@
     <div class="container footer-grid">
       <div><strong>Eclipse Water Technologies</strong></div>
       <div style="display: flex; gap: 1.2rem; align-items: center;">
-        <a href="contact.html" class="btn btn-small">Talk to us</a>
+        <a href="contact.php" class="btn btn-small">Talk to us</a>
         <a href="https://www.linkedin.com/company/eclipse-water-technologies" target="_blank" aria-label="LinkedIn" style="margin-left:0.5rem;"><img src="linkedin-icon.svg" alt="LinkedIn" style="height:24px;width:24px;vertical-align:middle;"></a>
         <a href="https://www.instagram.com/eclipsewatertech" target="_blank" aria-label="Instagram"><img src="instagram-icon.svg" alt="Instagram" style="height:24px;width:24px;vertical-align:middle;"></a>
         <a href="https://www.facebook.com/eclipsewatertech" target="_blank" aria-label="Facebook"><img src="facebook-icon.svg" alt="Facebook" style="height:24px;width:24px;vertical-align:middle;"></a>

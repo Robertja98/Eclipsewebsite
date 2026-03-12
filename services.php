@@ -30,29 +30,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">
-        <img src="Eclipselogo2026.png" alt="Eclipse Water Technologies Logo" class="logo" />
-      </a>
-      <nav>
-        <ul class="nav">
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html" class="active">Services</a></li>
-          <li><a href="industries.html">Industries</a></li>
-          <li><a href="specs.html">Technical Specs</a></li>
-          <li><a href="case-studies.html">Case Studies</a></li>
-          <li><a href="contact.html" class="btn btn-small">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <?php include 'navbar.php'; ?>
 
   <section class="hero hero-sub">
     <div class="container">
       <h1>Water Treatment Services</h1>
       <p>Proudly Canadian. No tariffs. Stable pricing. Expert service across DI systems, softeners, filtration, and more.</p>
-      <a href="contact.html" class="btn">Request a Quote</a>
+      <a href="contact.php" class="btn">Request a Quote</a>
     </div>
   </section>
 
@@ -67,7 +51,7 @@
         <li>Remote monitoring and telemetry</li>
         <li>Membrane cleaning, rebedding, and cartridge changes</li>
       </ul>
-      <a class="link" href="contact.html">Schedule a service review →</a>
+      <a class="link" href="contact.php">Schedule a service review →</a>
     </article>
 
     <article class="card">
@@ -80,7 +64,7 @@
         <li>Product lifecycle management (PLM)</li>
         <li>Written reports and performance tracking</li>
       </ul>
-      <a class="link" href="contact.html">Request technical support →</a>
+      <a class="link" href="contact.php">Request technical support →</a>
     </article>
 
     <article class="card">
@@ -93,7 +77,7 @@
         <li><strong>Wastewater:</strong> DAF, oxygen generators, neutralization, filter presses</li>
         <li><strong>Chemicals:</strong> Anti-scalants, coagulants, flocculants, AOP, cleaners</li>
       </ul>
-      <a class="link" href="contact.html">Explore system options →</a>
+      <a class="link" href="contact.php">Explore system options →</a>
     </article>
 
     <article class="card">
@@ -106,7 +90,7 @@
         <li>Inspection of housings, end caps, and piping assemblies</li>
         <li>Performance tracking via normalization software</li>
       </ul>
-      <a class="link" href="contact.html">Optimize your RO system →</a>
+      <a class="link" href="contact.php">Optimize your RO system →</a>
     </article>
   </section>
 
@@ -114,7 +98,7 @@
     <div class="container">
       <h2>Not sure which service fits your system?</h2>
       <p>We’ll help you choose the right configuration based on flow rate, purity level, and application.</p>
-      <a href="contact.html" class="btn">Request a Quote</a>
+      <a href="contact.php" class="btn">Request a Quote</a>
     </div>
   </section>
 
@@ -122,7 +106,7 @@
     <div class="container footer-grid">
       <div><strong>Eclipse Water Technologies</strong></div>
       <div style="display: flex; gap: 1.2rem; align-items: center;">
-        <a href="contact.html" class="btn btn-small">Talk to us</a>
+        <a href="contact.php" class="btn btn-small">Talk to us</a>
         <a href="https://www.linkedin.com/company/eclipse-water-technologies" target="_blank" aria-label="LinkedIn" style="margin-left:0.5rem;"><img src="linkedin-icon.svg" alt="LinkedIn" style="height:24px;width:24px;vertical-align:middle;"></a>
         <a href="https://www.instagram.com/eclipsewatertech" target="_blank" aria-label="Instagram"><img src="instagram-icon.svg" alt="Instagram" style="height:24px;width:24px;vertical-align:middle;"></a>
         <a href="https://www.facebook.com/eclipsewatertech" target="_blank" aria-label="Facebook"><img src="facebook-icon.svg" alt="Facebook" style="height:24px;width:24px;vertical-align:middle;"></a>

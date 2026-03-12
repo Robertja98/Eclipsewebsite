@@ -67,23 +67,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">
-        <img src="Eclipselogo2026.png" alt="Eclipse Water Technologies Logo" class="logo" />
-      </a>
-      <nav>
-        <ul class="nav">
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="industries.html" class="active">Industries</a></li>
-          <li><a href="specs.html">Technical Specs</a></li>
-          <li><a href="case-studies.html">Case Studies</a></li>
-          <li><a href="contact.html" class="btn btn-small">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <?php include 'navbar.php'; ?>
 
   <section class="hero hero-sub">
     <div class="container">
@@ -96,27 +80,27 @@
     <article class="card">
       <h3>Pharmaceutical & Biotech</h3>
       <p>DI water systems that meet stringent purity standards for formulation, cleaning, and lab use.</p>
-      <a class="link" href="contact.html">Request a consultation →</a>
+      <a class="link" href="contact.php">Request a consultation →</a>
     </article>
     <article class="card">
       <h3>Electronics & Semiconductor</h3>
       <p>High-resistivity water for rinsing, etching, and cooling. Protect sensitive components with consistent water quality.</p>
-      <a class="link" href="contact.html">Get a quote →</a>
+      <a class="link" href="contact.php">Get a quote →</a>
     </article>
     <article class="card">
       <h3>Food & Beverage</h3>
       <p>Carbon filtration and softeners for ingredient water, equipment cleaning, and steam generation.</p>
-      <a class="link" href="contact.html">Explore solutions →</a>
+      <a class="link" href="contact.php">Explore solutions →</a>
     </article>
     <article class="card">
       <h3>Automotive & Manufacturing</h3>
       <p>DI water for paint booths, cooling systems, and final rinse. Reduce spotting, scale, and downtime.</p>
-      <a class="link" href="contact.html">Talk to an expert →</a>
+      <a class="link" href="contact.php">Talk to an expert →</a>
     </article>
     <article class="card">
       <h3>Laboratories & Research</h3>
       <p>Compact DI systems for analytical testing, reagent prep, and glassware cleaning. Easy to install, easy to maintain.</p>
-      <a class="link" href="contact.html">See lab options →</a>
+      <a class="link" href="contact.php">See lab options →</a>
     </article>
   </section>
 
@@ -124,7 +108,7 @@
     <div class="container">
       <h2>Not sure which system fits your facility?</h2>
       <p>We’ll help you choose the right configuration based on flow rate, purity level, and application.</p>
-      <a href="contact.html" class="btn">Request a Quote</a>
+      <a href="contact.php" class="btn">Request a Quote</a>
     </div>
   </section>
 
@@ -132,7 +116,7 @@
     <div class="container footer-grid">
       <div><strong>Eclipse Water Technologies</strong></div>
       <div style="display: flex; gap: 1.2rem; align-items: center;">
-        <a href="contact.html" class="btn btn-small">Talk to us</a>
+        <a href="contact.php" class="btn btn-small">Talk to us</a>
         <a href="https://www.linkedin.com/company/eclipse-water-technologies" target="_blank" aria-label="LinkedIn" style="margin-left:0.5rem;"><img src="linkedin-icon.svg" alt="LinkedIn" style="height:24px;width:24px;vertical-align:middle;"></a>
         <a href="https://www.instagram.com/eclipsewatertech" target="_blank" aria-label="Instagram"><img src="instagram-icon.svg" alt="Instagram" style="height:24px;width:24px;vertical-align:middle;"></a>
         <a href="https://www.facebook.com/eclipsewatertech" target="_blank" aria-label="Facebook"><img src="facebook-icon.svg" alt="Facebook" style="height:24px;width:24px;vertical-align:middle;"></a>

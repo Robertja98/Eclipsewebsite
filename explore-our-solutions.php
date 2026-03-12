@@ -9,23 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">
-        <img src="Eclipselogo2026.png" alt="Eclipse Water Technologies Logo" class="logo" />
-      </a>
-      <nav>
-        <ul class="nav">
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="industries.html">Industries</a></li>
-          <li><a href="specs.html">Technical Specs</a></li>
-          <li><a href="case-studies.html">Case Studies</a></li>
-          <li><a href="contact.html" class="btn btn-small">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <?php include 'navbar.php'; ?>
   <section class="hero hero-sub">
     <div class="container">
       <h1>Explore Our Solutions</h1>
@@ -60,14 +44,14 @@
     </article>
   </section>
   <section class="container" style="text-align:center; margin-top:2rem;">
-    <a href="contact.html" class="btn">Request a Consultation</a>
+    <a href="contact.php" class="btn">Request a Consultation</a>
     <p style="margin-top:1rem; color:#4B4B4B;">Not sure what you need? Our team will help you find the right solution for your business or facility.</p>
   </section>
   <footer class="site-footer">
     <div class="container footer-grid">
       <div><strong>Eclipse Water Technologies</strong></div>
       <div style="display: flex; gap: 1.2rem; align-items: center;">
-        <a href="contact.html" class="btn btn-small">Talk to us</a>
+        <a href="contact.php" class="btn btn-small">Talk to us</a>
         <a href="https://www.linkedin.com/company/eclipse-water-technologies" target="_blank" aria-label="LinkedIn" style="margin-left:0.5rem;"><img src="linkedin-icon.svg" alt="LinkedIn" style="height:24px;width:24px;vertical-align:middle;"></a>
         <a href="https://www.instagram.com/eclipsewatertech" target="_blank" aria-label="Instagram"><img src="instagram-icon.svg" alt="Instagram" style="height:24px;width:24px;vertical-align:middle;"></a>
         <a href="https://www.facebook.com/eclipsewatertech" target="_blank" aria-label="Facebook"><img src="facebook-icon.svg" alt="Facebook" style="height:24px;width:24px;vertical-align:middle;"></a>

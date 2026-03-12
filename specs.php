@@ -131,23 +131,7 @@
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">
-        <img src="Eclipselogo2026.png" alt="Eclipse Water Technologies Logo" class="logo" />
-      </a>
-      <nav>
-        <ul class="nav">
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="industries.html">Industries</a></li>
-          <li><a href="specs.html" class="active">Technical Specs</a></li>
-          <li><a href="case-studies.html">Case Studies</a></li>
-          <li><a href="contact.html" class="btn btn-small">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <?php include 'navbar.php'; ?>
   <main>
     <section class="container" style="margin-top:2rem;">
       <h1 style="font-family:'Montserrat',sans-serif;color:#003366;font-size:2rem;margin-bottom:1.5rem;">Technical Specifications</h1>

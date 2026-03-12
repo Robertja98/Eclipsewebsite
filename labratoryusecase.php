@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-CA">
 <head>
-  <meta charset="UTF-8" />
+      <a class="link" href="contact.php">Explore high-purity solutions </a>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Case Study | 18 MegOhm Water for Toronto Laboratory</title>
@@ -9,7 +9,7 @@
   <meta name="keywords" content="18 MegOhm water, Toronto lab water treatment, DI tanks, RO polishing, Eclipse Water Technologies case study" />
   <meta name="author" content="Eclipse Water Technologies" />
   <link rel="canonical" href="https://eclipsewatertechnologies.com/case-study-lab.html" />
-  <link rel="icon" href="https://eclipsewatertechnologies.com/images/favicon.ico" type="image/x-icon" />
+      <a href="contact.php" class="btn">Request a Quote</a>
 
   <!-- Open Graph -->
   <meta property="og:title" content="Case Study | 18 MegOhm Water for Toronto Laboratory" />
@@ -20,10 +20,10 @@
 
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-  <?php include 'navbar.php'; ?>
-
+        <a href="services.php">Services</a><br />
+        <a href="industries.php">Industries</a><br />
+        <a href="case-studies.php">Case Studies</a><br />
+        <a href="contact.php">Contact</a>
   <section class="hero hero-sub">
     <div class="container">
       <h1>Case Study: High-Purity Water for Toronto Laboratory</h1>
