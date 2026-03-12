@@ -1,0 +1,10 @@
+# Ignore these folders anywhere in the repo
+CRM/
+**/CRM/
+
+flash/
+**/flash/
+
+# If the folder name contains a space, you can still list it directly
+cancellation page/
+**/cancellation page/
