@@ -73,6 +73,27 @@
     </div>
     <!-- If there are more case studies in the original, insert them here in the same card format -->
   </section>
+
+  <section class="container cards">
+    <div class="card">
+      <h3>Related service pages</h3>
+      <p>Use these pages to move from proof points into active service planning.</p>
+      <ul class="bullets">
+        <li><a class="link" href="di-water-service-toronto.php">DI Water Service Toronto</a></li>
+        <li><a class="link" href="industrial-water-treatment-toronto.php">Industrial Water Treatment Toronto</a></li>
+        <li><a class="link" href="metal-finishing-di-water-systems.php">Metal Finishing DI Water Systems</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>High-purity planning pages</h3>
+      <p>If your application depends on resistivity, rinse quality, or tighter process control, these pages provide the most relevant next step.</p>
+      <ul class="bullets">
+        <li><a class="link" href="lab-di-water-systems-ontario.php">Lab DI Water Systems Ontario</a></li>
+        <li><a class="link" href="high-purity-water-systems-canada.php">High Purity Water Systems Canada</a></li>
+        <li><a class="link" href="reverse-osmosis-service-canada.php">Reverse Osmosis Service Canada</a></li>
+      </ul>
+    </div>
+  </section>
   <footer class="site-footer">
     <div class="container footer-grid">
       <div><strong>Eclipse Water Technologies</strong></div>

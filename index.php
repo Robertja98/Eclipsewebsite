@@ -117,6 +117,33 @@
     </article>
   </section>
 
+  <section class="container cards">
+    <article class="card">
+      <h3>Toronto service pages</h3>
+      <p>Start with the pages most aligned to local commercial search intent and day-to-day facility needs.</p>
+      <ul class="bullets">
+        <li><a class="link" href="di-water-service-toronto.php">DI Water Service Toronto</a></li>
+        <li><a class="link" href="industrial-water-treatment-toronto.php">Industrial Water Treatment Toronto</a></li>
+      </ul>
+    </article>
+    <article class="card">
+      <h3>High-purity applications</h3>
+      <p>Explore pages built around laboratory and hospital use cases where service response and water quality control matter most.</p>
+      <ul class="bullets">
+        <li><a class="link" href="lab-di-water-systems-ontario.php">Lab DI Water Systems Ontario</a></li>
+        <li><a class="link" href="hospital-di-water-systems-ontario.php">Hospital DI Water Systems Ontario</a></li>
+      </ul>
+    </article>
+    <article class="card">
+      <h3>Proof and technical support</h3>
+      <p>Use the case studies and service pages together to evaluate how Eclipse supports production, rinse water, and high-purity systems.</p>
+      <ul class="bullets">
+        <li><a class="link" href="case-studies.php">Read case studies</a></li>
+        <li><a class="link" href="services.php">Review service categories</a></li>
+      </ul>
+    </article>
+  </section>
+
   <footer class="site-footer">
     <div class="container footer-grid">
       <div><strong>Eclipse Water Technologies</strong></div>

@@ -20,6 +20,38 @@
   <meta name="twitter:description" content="Toronto industrial water treatment for process water, rinse water, and reliability-driven service programs." />
   <meta name="twitter:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
   <meta name="twitter:site" content="@EclipseWaterTech" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does industrial water treatment in Toronto usually include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Industrial water treatment often includes pretreatment, softening, carbon filtration, reverse osmosis, deionization, and technical support tied to process uptime and water quality goals."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should a facility review its water treatment system?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A review is worthwhile when water quality drifts, service frequency increases, membranes foul early, rinse quality falls off, or production demand changes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can one supplier support DI, RO, softening, and filtration together?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Many facilities benefit from a single partner who can evaluate the full treatment train, since upstream problems often affect downstream equipment and service costs."
+        }
+      }
+    ]
+  }
+  </script>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -54,6 +86,24 @@
       <h3>Project and service support</h3>
       <p>We help with system sizing, media selection, service intervals, instrument checks, membrane performance, and rinse-water consistency.</p>
       <a class="link" href="metalfinishing.php">See a production-focused case study →</a>
+    </article>
+  </section>
+
+  <section class="container cards">
+    <article class="card">
+      <h3>Frequently asked questions</h3>
+      <p><strong>What does industrial water treatment usually include?</strong><br>Most facilities need a combination of pretreatment, softening, carbon filtration, reverse osmosis, DI, and service support tied to the process.</p>
+      <p><strong>When should a facility review its system?</strong><br>If water quality drifts, service intervals shorten, membranes foul, rinse quality drops, or production changes, the system should be reviewed.</p>
+      <p><strong>Can one supplier support the whole treatment train?</strong><br>Yes. A full-system view often reduces cost and risk because upstream issues can affect every downstream step.</p>
+    </article>
+    <article class="card">
+      <h3>Related pages</h3>
+      <ul class="bullets">
+        <li><a class="link" href="di-water-service-toronto.php">DI Water Service Toronto</a></li>
+        <li><a class="link" href="industrial-water-softener-service.php">Industrial Water Softener Service</a></li>
+        <li><a class="link" href="activated-carbon-filtration-service.php">Activated Carbon Filtration Service</a></li>
+        <li><a class="link" href="reverse-osmosis-service-canada.php">Reverse Osmosis Service Canada</a></li>
+      </ul>
     </article>
   </section>
 

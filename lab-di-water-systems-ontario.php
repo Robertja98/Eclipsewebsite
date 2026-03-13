@@ -56,6 +56,22 @@
     </article>
   </section>
 
+  <section class="container cards">
+    <article class="card">
+      <h3>Related pages</h3>
+      <ul class="bullets">
+        <li><a class="link" href="di-water-service-toronto.php">DI Water Service Toronto</a></li>
+        <li><a class="link" href="high-purity-water-systems-canada.php">High Purity Water Systems Canada</a></li>
+        <li><a class="link" href="case-studies.php">See more case studies</a></li>
+      </ul>
+    </article>
+    <article class="card">
+      <h3>Questions labs ask first</h3>
+      <p>Most lab projects start with feed water quality, target resistivity, daily volume, and how much support the site wants to manage internally.</p>
+      <a class="link" href="contact.php">Discuss your lab application →</a>
+    </article>
+  </section>
+
   <section class="strip cta-strip">
     <div class="container">
       <h2>Need reliable lab DI water in Ontario?</h2>

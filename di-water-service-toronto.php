@@ -20,6 +20,38 @@
   <meta name="twitter:description" content="Toronto DI water service for process water, rinse water, and high-purity applications." />
   <meta name="twitter:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
   <meta name="twitter:site" content="@EclipseWaterTech" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is DI water service in Toronto used for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "DI water service in Toronto is commonly used for laboratory rinse water, manufacturing rinse stages, post-RO polishing, and process applications that need lower conductivity or higher resistivity water."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is DI tank exchange better than onsite regeneration?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For many facilities, DI tank exchange is simpler and lower risk because it avoids onsite chemical handling, reduces maintenance burden, and keeps service intervals predictable."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you size DI water service for a facility?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sizing depends on flow rate, feed water quality, target water quality, operating hours, and how much service interruption the process can tolerate."
+        }
+      }
+    ]
+  }
+  </script>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -59,6 +91,23 @@
       <h3>Why buyers choose Eclipse</h3>
       <p>Our Toronto DI water service is built around predictable response times, practical engineering support, and less operational risk for your team.</p>
       <a class="link" href="di-tank-exchange-service.php">Explore DI tank exchange service →</a>
+    </article>
+  </section>
+
+  <section class="container cards">
+    <article class="card">
+      <h3>Frequently asked questions</h3>
+      <p><strong>What is DI water service in Toronto used for?</strong><br>DI water service is typically used for laboratories, manufacturing rinse stages, post-RO polishing, and applications where water quality consistency protects production or test results.</p>
+      <p><strong>Is DI tank exchange better than onsite regeneration?</strong><br>For many facilities it is, because the service model reduces onsite handling, lowers maintenance burden, and makes water quality support easier to schedule.</p>
+      <p><strong>How do you size DI water service?</strong><br>We look at feed water, target purity, average and peak flow, operating hours, and how much downtime the process can tolerate.</p>
+    </article>
+    <article class="card">
+      <h3>Related pages</h3>
+      <ul class="bullets">
+        <li><a class="link" href="industrial-water-treatment-toronto.php">Industrial Water Treatment Toronto</a></li>
+        <li><a class="link" href="lab-di-water-systems-ontario.php">Lab DI Water Systems Ontario</a></li>
+        <li><a class="link" href="case-studies.php">Case studies and proof points</a></li>
+      </ul>
     </article>
   </section>
 
