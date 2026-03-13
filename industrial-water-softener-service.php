@@ -20,6 +20,38 @@
   <meta name="twitter:description" content="Industrial water softener service for scale control, pretreatment reliability, and reduced operating risk." />
   <meta name="twitter:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
   <meta name="twitter:site" content="@EclipseWaterTech" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does industrial water softener service help prevent?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Industrial water softener service helps prevent scale buildup, hardness carryover, inefficient regeneration, and pretreatment instability that can affect downstream equipment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does softener performance matter to the full treatment train?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Softener performance matters because hardness leakage can increase scaling risk, reduce pretreatment stability, and create avoidable problems for RO, boilers, and other downstream systems."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should a facility review softener settings and service intervals?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A review is worthwhile when salt use changes, hardness appears downstream, regeneration timing looks off, or the facility operating pattern changes."
+        }
+      }
+    ]
+  }
+  </script>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -50,6 +82,23 @@
       <h3>Typical fit</h3>
       <p>Industrial softener service is often paired with carbon filtration, RO pretreatment, or downstream DI requirements.</p>
       <a class="link" href="activated-carbon-filtration-service.php">Explore carbon filtration service →</a>
+    </article>
+  </section>
+  <section class="container cards">
+    <article class="card">
+      <h3>Frequently asked questions</h3>
+      <p><strong>What does industrial water softener service help prevent?</strong><br>It helps prevent scale buildup, hardness carryover, inefficient regeneration, and pretreatment instability that can affect downstream equipment.</p>
+      <p><strong>Why does softener performance matter to the full treatment train?</strong><br>Because hardness leakage can increase scaling risk and create avoidable problems for RO systems, boilers, and other downstream equipment.</p>
+      <p><strong>When should a facility review settings and service intervals?</strong><br>When salt use changes, hardness appears downstream, regeneration timing looks off, or operating patterns change.</p>
+    </article>
+    <article class="card">
+      <h3>Related pages</h3>
+      <ul class="bullets">
+        <li><a class="link" href="activated-carbon-filtration-service.php">Activated Carbon Filtration Service</a></li>
+        <li><a class="link" href="reverse-osmosis-service-canada.php">Reverse Osmosis Service Canada</a></li>
+        <li><a class="link" href="industrial-water-treatment-toronto.php">Industrial Water Treatment Toronto</a></li>
+        <li><a class="link" href="contact.php">Request softener support</a></li>
+      </ul>
     </article>
   </section>
   <footer class="site-footer"><div class="container footer-grid"><div><strong>Eclipse Water Technologies</strong></div><div style="display: flex; gap: 1.2rem; align-items: center;"><a href="contact.php" class="btn btn-small">Talk to us</a><a href="https://www.linkedin.com/company/eclipse-water-technologies" target="_blank" aria-label="LinkedIn" style="margin-left:0.5rem;"><img src="linkedin-icon.svg" alt="LinkedIn" style="height:24px;width:24px;vertical-align:middle;"></a><a href="https://www.instagram.com/eclipsewatertech" target="_blank" aria-label="Instagram"><img src="instagram-icon.svg" alt="Instagram" style="height:24px;width:24px;vertical-align:middle;"></a><a href="https://www.facebook.com/eclipsewatertech" target="_blank" aria-label="Facebook"><img src="facebook-icon.svg" alt="Facebook" style="height:24px;width:24px;vertical-align:middle;"></a></div><div><p>&copy; 2026 Eclipse Water Technologies</p></div></div></footer>

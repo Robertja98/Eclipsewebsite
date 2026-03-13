@@ -20,6 +20,38 @@
   <meta name="twitter:description" content="Scheduled DI tank exchange service for predictable water quality and less operational burden." />
   <meta name="twitter:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
   <meta name="twitter:site" content="@EclipseWaterTech" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is DI tank exchange service used for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "DI tank exchange service is used when facilities need predictable high-purity water without onsite resin regeneration, especially for labs, rinse lines, seasonal demand, and post-RO polishing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do facilities choose DI tank exchange instead of onsite regeneration?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Facilities often choose exchange service to reduce onsite handling, simplify maintenance, keep water quality support predictable, and scale service more easily as demand changes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is exchange frequency determined?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Exchange frequency is determined by feed water quality, water use, target purity, flow rate, and how much interruption the process can tolerate."
+        }
+      }
+    ]
+  }
+  </script>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -51,6 +83,23 @@
       <h3>Why facilities use it</h3>
       <p>It reduces onsite handling, keeps service predictable, and makes it easier to scale purity support up or down as process needs shift.</p>
       <a class="link" href="contact.php">Talk to Eclipse about an exchange program →</a>
+    </article>
+  </section>
+  <section class="container cards">
+    <article class="card">
+      <h3>Frequently asked questions</h3>
+      <p><strong>What is DI tank exchange service used for?</strong><br>It is commonly used for labs, rinse lines, seasonal demand, and post-RO polishing where predictable high-purity water matters more than onsite regeneration.</p>
+      <p><strong>Why choose exchange service instead of onsite regeneration?</strong><br>It reduces onsite handling, simplifies maintenance, keeps support predictable, and makes scaling easier as demand changes.</p>
+      <p><strong>How is exchange frequency determined?</strong><br>We look at feed water quality, water use, target purity, flow rate, and how much interruption the process can tolerate.</p>
+    </article>
+    <article class="card">
+      <h3>Related pages</h3>
+      <ul class="bullets">
+        <li><a class="link" href="di-water-service-toronto.php">DI Water Service Toronto</a></li>
+        <li><a class="link" href="lab-di-water-systems-ontario.php">Lab DI Water Systems Ontario</a></li>
+        <li><a class="link" href="high-purity-water-systems-canada.php">High Purity Water Systems Canada</a></li>
+        <li><a class="link" href="contact.php">Request an exchange review</a></li>
+      </ul>
     </article>
   </section>
   <footer class="site-footer">
