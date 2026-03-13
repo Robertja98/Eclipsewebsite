@@ -6,7 +6,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eclipse Water Technologies | Canadian DI Water Systems, Softeners & Filtration</title>
-  <meta name="description" content="Proudly Canadian provider of deionized water systems, water softeners, and activated carbon filtration for industrial and commercial clients. No U.S. tariffs — stable pricing, dependable supply, and expert service." />
+  <meta name="description" content="Canadian DI water systems, softeners, and filtration for industrial and commercial clients with stable pricing, dependable supply, and expert service." />
   <meta name="keywords" content="Canadian water treatment, deionized water systems, DI tanks, industrial water softeners, activated carbon filtration, high purity water, Eclipse Water Technologies, no tariffs, industrial water solutions Canada" />
   <meta name="author" content="Eclipse Water Technologies" />
   <link rel="canonical" href="https://eclipsewatertechnologies.com/" />
@@ -34,7 +34,7 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WaterTreatment",
+    "@type": ["LocalBusiness", "Organization"],
     "name": "Eclipse Water Technologies",
     "image": "Eclipselogo2026.png",
     "url": "https://eclipsewatertechnologies.com",

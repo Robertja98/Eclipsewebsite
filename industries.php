@@ -121,6 +121,7 @@
       <ul class="bullets">
         <li><a class="link" href="hospital-di-water-systems-ontario.php">Hospital DI Water Systems Ontario</a></li>
         <li><a class="link" href="metal-finishing-di-water-systems.php">Metal Finishing DI Water Systems</a></li>
+        <li><a class="link" href="di-water-service-toronto.php">DI Water Service Toronto</a></li>
         <li><a class="link" href="industrial-water-treatment-toronto.php">Industrial Water Treatment Toronto</a></li>
       </ul>
     </article>

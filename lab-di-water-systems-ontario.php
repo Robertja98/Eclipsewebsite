@@ -20,6 +20,38 @@
   <meta name="twitter:description" content="Ontario lab DI water systems for analytical, research, and high-purity applications." />
   <meta name="twitter:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
   <meta name="twitter:site" content="@EclipseWaterTech" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What do lab DI water systems in Ontario usually support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Lab DI water systems usually support reagent preparation, analytical testing, glassware rinsing, and post-RO polishing where higher resistivity and more consistent water quality are required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do laboratories need reverse osmosis before DI polishing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Many labs do. Reverse osmosis often reduces the load on the polishing stage, improves operating efficiency, and helps stabilize final water quality targets."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you size a lab water system?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sizing depends on feed water quality, target resistivity, daily and peak demand, point-of-use needs, and how much maintenance the lab wants to manage internally."
+        }
+      }
+    ]
+  }
+  </script>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -69,6 +101,23 @@
       <h3>Questions labs ask first</h3>
       <p>Most lab projects start with feed water quality, target resistivity, daily volume, and how much support the site wants to manage internally.</p>
       <a class="link" href="contact.php">Discuss your lab application →</a>
+    </article>
+  </section>
+
+  <section class="container cards">
+    <article class="card">
+      <h3>Frequently asked questions</h3>
+      <p><strong>What do lab DI water systems usually support?</strong><br>They are commonly used for reagent preparation, analytical testing, glassware rinsing, and post-RO polishing where higher resistivity matters.</p>
+      <p><strong>Do labs need reverse osmosis before DI polishing?</strong><br>Many do, because RO reduces the polishing load, improves efficiency, and helps stabilize the final water quality target.</p>
+      <p><strong>How do you size a lab system?</strong><br>We look at feed water quality, target resistivity, daily and peak demand, and how much maintenance the site wants to manage internally.</p>
+    </article>
+    <article class="card">
+      <h3>Next-step pages</h3>
+      <ul class="bullets">
+        <li><a class="link" href="reverse-osmosis-service-canada.php">Reverse Osmosis Service Canada</a></li>
+        <li><a class="link" href="laboratoryusecase.php">Laboratory case study</a></li>
+        <li><a class="link" href="contact.php">Talk to Eclipse about lab support</a></li>
+      </ul>
     </article>
   </section>
 

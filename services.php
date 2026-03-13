@@ -25,6 +25,26 @@
   <meta name="twitter:description" content="DI systems, softeners, and filtration. Proudly Canadian. No tariffs." />
   <meta name="twitter:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
   <meta name="twitter:site" content="@EclipseWaterTech" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Service", "ProfessionalService"],
+    "name": "Eclipse Water Technologies Water Treatment Services",
+    "serviceType": "Industrial and commercial water treatment services",
+    "provider": {
+      "@type": "Organization",
+      "name": "Eclipse Water Technologies",
+      "url": "https://eclipsewatertechnologies.com/",
+      "telephone": "+1-647-355-0944"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Canada"
+    },
+    "url": "https://eclipsewatertechnologies.com/services.php",
+    "description": "Canadian water treatment services including DI systems, softeners, filtration, RO support, and technical service programs."
+  }
+  </script>
 
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
