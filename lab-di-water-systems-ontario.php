@@ -52,7 +52,7 @@
     <article class="card">
       <h3>Relevant proof</h3>
       <p>We already use this approach in the GTA for clients who need consistent high-purity water without oversized capital upgrades.</p>
-      <a class="link" href="labratoryusecase.php">Read the laboratory case study →</a>
+      <a class="link" href="laboratoryusecase.php">Read the laboratory case study →</a>
     </article>
   </section>
 

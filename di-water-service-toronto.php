@@ -53,7 +53,7 @@
         <li>Feed water polishing after reverse osmosis</li>
         <li>Seasonal or project-based high-purity water demand</li>
       </ul>
-      <a class="link" href="labratoryusecase.php">See a Toronto lab case study →</a>
+      <a class="link" href="laboratoryusecase.php">See a Toronto lab case study →</a>
     </article>
     <article class="card">
       <h3>Why buyers choose Eclipse</h3>

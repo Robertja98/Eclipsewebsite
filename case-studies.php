@@ -57,9 +57,9 @@
   </section>
   <section class="container cards">
     <div class="card">
-      <h3>Labratory Application – Toronto, ON</h3>
+      <h3>Laboratory Application – Toronto, ON</h3>
       <p>Installed a DI system with carbon pre-filtration. Reduced downtime by 40% and improved rinse purity to 18 MΩ.</p>
-      <a href="labratoryusecase.php" class="link">Read More →</a>
+      <a href="laboratoryusecase.php" class="link">Read More →</a>
     </div>
     <div class="card">
       <h3>Metal Finishing Application, Toronto-ON</h3>
