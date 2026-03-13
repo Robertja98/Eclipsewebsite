@@ -7,6 +7,40 @@
   <meta name="description" content="Get in touch with Eclipse Water Technologies. Reach out to Robert Lee, CET, PMP for expert water treatment solutions." />
   <link rel="canonical" href="https://eclipsewatertechnologies.com/contact.php" />
   <link rel="icon" href="https://eclipsewatertechnologies.com/Eclipselogo2026.png" type="image/png" />
+
+  <meta property="og:title" content="Contact | Eclipse Water Technologies" />
+  <meta property="og:description" content="Talk to Eclipse Water Technologies about DI water systems, water softeners, filtration, and technical support." />
+  <meta property="og:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
+  <meta property="og:url" content="https://eclipsewatertechnologies.com/contact.php" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_CA" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact | Eclipse Water Technologies" />
+  <meta name="twitter:description" content="Talk to Eclipse Water Technologies about DI water systems, water softeners, filtration, and technical support." />
+  <meta name="twitter:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
+  <meta name="twitter:site" content="@EclipseWaterTech" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Eclipse Water Technologies",
+    "url": "https://eclipsewatertechnologies.com/contact.php",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Eclipse Water Technologies",
+      "telephone": "+1-647-355-0944",
+      "email": "rlee@eclipsewatertechnologies.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toronto",
+        "addressRegion": "ON",
+        "addressCountry": "CA"
+      }
+    }
+  }
+  </script>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -14,6 +48,7 @@
   <?php include 'navbar.php'; ?>
 
   <section class="container contact-info">
+    <h1>Contact Eclipse Water Technologies</h1>
     <h2>Contact Robert Lee, CET, PMP</h2>
     <p><strong>Phone:</strong> <a href="tel:+16473550944">647-355-0944</a></p>
     <p><strong>Email:</strong> <a href="mailto:rlee@eclipsewatertechnologies.com">rlee@eclipsewatertechnologies.com</a></p>

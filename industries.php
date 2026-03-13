@@ -104,6 +104,28 @@
     </article>
   </section>
 
+  <section class="container cards">
+    <article class="card">
+      <h3>Laboratory water pages</h3>
+      <p>Pages built around high-purity water requirements for testing, research, and compliance.</p>
+      <ul class="bullets">
+        <li><a class="link" href="lab-di-water-systems-ontario.php">Lab DI Water Systems Ontario</a></li>
+        <li><a class="link" href="high-purity-water-systems-canada.php">High Purity Water Systems Canada</a></li>
+        <li><a class="link" href="reverse-osmosis-service-canada.php">Reverse Osmosis Service Canada</a></li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h3>Healthcare and manufacturing pages</h3>
+      <p>Find solutions tailored to rinse water, sterilization support, plating, and production uptime.</p>
+      <ul class="bullets">
+        <li><a class="link" href="hospital-di-water-systems-ontario.php">Hospital DI Water Systems Ontario</a></li>
+        <li><a class="link" href="metal-finishing-di-water-systems.php">Metal Finishing DI Water Systems</a></li>
+        <li><a class="link" href="industrial-water-treatment-toronto.php">Industrial Water Treatment Toronto</a></li>
+      </ul>
+    </article>
+  </section>
+
   <section class="strip cta-strip">
     <div class="container">
       <h2>Not sure which system fits your facility?</h2>

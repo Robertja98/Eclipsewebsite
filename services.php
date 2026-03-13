@@ -94,6 +94,40 @@
     </article>
   </section>
 
+  <section class="container cards">
+    <article class="card">
+      <h3>Local service pages</h3>
+      <p>Find the most relevant service page for your facility, geography, or application.</p>
+      <ul class="bullets">
+        <li><a class="link" href="di-water-service-toronto.php">DI Water Service Toronto</a></li>
+        <li><a class="link" href="industrial-water-treatment-toronto.php">Industrial Water Treatment Toronto</a></li>
+        <li><a class="link" href="di-tank-exchange-service.php">DI Tank Exchange Service</a></li>
+        <li><a class="link" href="industrial-water-softener-service.php">Industrial Water Softener Service</a></li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h3>Industry-specific pages</h3>
+      <p>Explore pages tailored to hospitals, laboratories, metal finishing, and high-purity applications.</p>
+      <ul class="bullets">
+        <li><a class="link" href="lab-di-water-systems-ontario.php">Lab DI Water Systems Ontario</a></li>
+        <li><a class="link" href="hospital-di-water-systems-ontario.php">Hospital DI Water Systems Ontario</a></li>
+        <li><a class="link" href="metal-finishing-di-water-systems.php">Metal Finishing DI Water Systems</a></li>
+        <li><a class="link" href="high-purity-water-systems-canada.php">High Purity Water Systems Canada</a></li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h3>Equipment and treatment pages</h3>
+      <p>Targeted pages for the systems buyers search for most often.</p>
+      <ul class="bullets">
+        <li><a class="link" href="activated-carbon-filtration-service.php">Activated Carbon Filtration Service</a></li>
+        <li><a class="link" href="reverse-osmosis-service-canada.php">Reverse Osmosis Service Canada</a></li>
+      </ul>
+      <a class="link" href="contact.php">Need a recommendation? Talk to us →</a>
+    </article>
+  </section>
+
   <section class="strip cta-strip">
     <div class="container">
       <h2>Not sure which service fits your system?</h2>
