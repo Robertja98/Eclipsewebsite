@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Explore Our Solutions | Eclipse Water Technologies</title>
   <meta name="description" content="Discover Eclipse Water Technologies' full range of water treatment solutions for Canadian businesses and industry. DI systems, softeners, filtration, and more." />
+  <link rel="canonical" href="https://eclipsewatertechnologies.com/explore-our-solutions.php" />
+  <link rel="icon" href="https://eclipsewatertechnologies.com/Eclipselogo2026.png" type="image/png" />
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>

@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="en-CA">
 <head>
-      <a class="link" href="contact.php">Explore high-purity solutions </a>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Case Study | 18 MegOhm Water for Toronto Laboratory</title>
-  <meta name="description" content="Eclipse Water Technologies supplies post-RO tanks and bi-weekly regeneration to deliver <18 MegOhm water for a major Toronto laboratory." />
+  <meta name="description" content="Eclipse Water Technologies supplies post-RO tanks and bi-weekly regeneration to deliver &lt;18 MegOhm water for a major Toronto laboratory." />
   <meta name="keywords" content="18 MegOhm water, Toronto lab water treatment, DI tanks, RO polishing, Eclipse Water Technologies case study" />
   <meta name="author" content="Eclipse Water Technologies" />
-  <link rel="canonical" href="https://eclipsewatertechnologies.com/case-study-lab.html" />
-      <a href="contact.php" class="btn">Request a Quote</a>
+  <link rel="canonical" href="https://eclipsewatertechnologies.com/labratoryusecase.php" />
+  <link rel="icon" href="https://eclipsewatertechnologies.com/Eclipselogo2026.png" type="image/png" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Case Study | 18 MegOhm Water for Toronto Laboratory" />
   <meta property="og:description" content="Post-RO tanks and bi-weekly regeneration support for high-purity water at a major Toronto lab." />
-  <meta property="og:url" content="https://eclipsewatertechnologies.com/case-study-lab.html" />
+  <meta property="og:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
+  <meta property="og:url" content="https://eclipsewatertechnologies.com/labratoryusecase.php" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="en_CA" />
 
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Case Study | 18 MegOhm Water for Toronto Laboratory" />
+  <meta name="twitter:description" content="Post-RO tanks and bi-weekly regeneration support for high-purity water at a major Toronto lab." />
+  <meta name="twitter:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
+  <meta name="twitter:site" content="@EclipseWaterTech" />
+
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-        <a href="services.php">Services</a><br />
-        <a href="industries.php">Industries</a><br />
-        <a href="case-studies.php">Case Studies</a><br />
-        <a href="contact.php">Contact</a>
+</head>
+<body>
+  <?php include 'navbar.php'; ?>
+
   <section class="hero hero-sub">
     <div class="container">
       <h1>Case Study: High-Purity Water for Toronto Laboratory</h1>
@@ -56,7 +63,7 @@
     <article class="card">
       <h3>Results</h3>
       <p>The lab now consistently receives water at <18 MegOhm resistivity, meeting ASTM Type I standards. Downtime has been eliminated, and the modular approach allows for scalability as demand grows.</p>
-      <a class="link" href="contact.html">Explore high-purity solutions →</a>
+      <a class="link" href="contact.php">Explore high-purity solutions →</a>
     </article>
   </section>
 
@@ -64,7 +71,7 @@
     <div class="container">
       <h2>Need high-resistivity water for your lab?</h2>
       <p>We’ll help you design a modular, service-backed solution that meets your purity and compliance goals.</p>
-      <a href="contact.html" class="btn">Request a Quote</a>
+      <a href="contact.php" class="btn">Request a Quote</a>
     </div>
   </section>
 
@@ -75,10 +82,10 @@
         <p>Proudly Canadian. Not affected by U.S. tariffs.</p>
       </div>
       <div>
-        <a href="services.html">Services</a><br />
-        <a href="industries.html">Industries</a><br />
-        <a href="case-studies.html">Case Studies</a><br />
-        <a href="contact.html">Contact</a>
+        <a href="services.php">Services</a><br />
+        <a href="industries.php">Industries</a><br />
+        <a href="case-studies.php">Case Studies</a><br />
+        <a href="contact.php">Contact</a>
       </div>
       <div class="social-links">
         <a href="https://www.facebook.com/eclipsewatertech" target="_blank" aria-label="Facebook">

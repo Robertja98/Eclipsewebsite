@@ -9,10 +9,11 @@
   <meta name="description" content="Proudly Canadian provider of deionized water systems, water softeners, and activated carbon filtration for industrial and commercial clients. No U.S. tariffs — stable pricing, dependable supply, and expert service." />
   <meta name="keywords" content="Canadian water treatment, deionized water systems, DI tanks, industrial water softeners, activated carbon filtration, high purity water, Eclipse Water Technologies, no tariffs, industrial water solutions Canada" />
   <meta name="author" content="Eclipse Water Technologies" />
+  <link rel="canonical" href="https://eclipsewatertechnologies.com/" />
   <!-- Open Graph -->
   <meta property="og:title" content="Eclipse Water Technologies | Pure Water. Pure Confidence." />
   <meta property="og:description" content="Proudly Canadian DI water systems, softeners, and filtration. No tariffs, stable pricing, expert service." />
-  <meta property="og:image" content="Eclipselogo2026.png" />
+  <meta property="og:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Eclipse Water Technologies New Logo" />
@@ -27,7 +28,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Eclipse Water Technologies | Pure Water. Pure Confidence." />
   <meta name="twitter:description" content="Canadian DI water systems, softeners, and filtration. No tariffs, stable pricing, expert service." />
-  <meta name="twitter:image" content="Eclipselogo2026.png" />
+  <meta name="twitter:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
   <meta name="twitter:site" content="@EclipseWaterTech" />
   <!-- Local Business Schema -->
   <script type="application/ld+json">
@@ -52,7 +53,7 @@
     }
   }
   </script>
-  <link rel="icon" href="Eclipselogo2026.png" type="image/png" />
+  <link rel="icon" href="https://eclipsewatertechnologies.com/Eclipselogo2026.png" type="image/png" />
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -67,8 +68,8 @@
       <h1>Exceptional Service. Clean, Affordable Water.<br>Trusted Canadian Expertise.</h1>
       <p>We simplify water treatment for businesses and industry—tailored solutions, expert support, and guaranteed satisfaction.</p>
       <div class="hero-ctas">
-        <a href="contact.html" class="btn btn-outline">Request a Quote</a>
-        <a href="explore-our-solutions.html" class="btn btn-outline">Explore Our Solutions</a>
+        <a href="contact.php" class="btn btn-outline">Request a Quote</a>
+        <a href="explore-our-solutions.php" class="btn btn-outline">Explore Our Solutions</a>
       </div>
       <div class="canadian-banner">
         <span>Proudly Canadian | We Work With Your Existing Contracts</span>
@@ -102,17 +103,17 @@
     <article class="card">
       <h3>Deionized water systems</h3>
       <p>Safe, convenient, and cost-effective DI water for industrial and commercial use.</p>
-      <a class="link" href="services.html#di">Learn more →</a>
+      <a class="link" href="services.php#di">Learn more →</a>
     </article>
     <article class="card">
       <h3>Industries we serve</h3>
       <p>Pharma, electronics, food & beverage, labs, automotive, and more.</p>
-      <a class="link" href="industries.html">See industries →</a>
+      <a class="link" href="industries.php">See industries →</a>
     </article>
     <article class="card">
       <h3>Technical specifications</h3>
       <p>Tank sizes, flow rates, resin capacities, and monitoring options.</p>
-      <a class="link" href="specs.html">View specs →</a>
+      <a class="link" href="specs.php">View specs →</a>
     </article>
   </section>
 
@@ -120,7 +121,7 @@
     <div class="container footer-grid">
       <div><strong>Eclipse Water Technologies</strong></div>
       <div style="display: flex; gap: 1.2rem; align-items: center;">
-        <a href="contact.html" class="btn btn-small">Talk to us</a>
+        <a href="contact.php" class="btn btn-small">Talk to us</a>
         <a href="https://www.linkedin.com/company/eclipse-water-technologies" target="_blank" aria-label="LinkedIn" style="margin-left:0.5rem;"><img src="linkedin-icon.svg" alt="LinkedIn" style="height:24px;width:24px;vertical-align:middle;"></a>
         <a href="https://www.instagram.com/eclipsewatertech" target="_blank" aria-label="Instagram"><img src="instagram-icon.svg" alt="Instagram" style="height:24px;width:24px;vertical-align:middle;"></a>
         <a href="https://www.facebook.com/eclipsewatertech" target="_blank" aria-label="Facebook"><img src="facebook-icon.svg" alt="Facebook" style="height:24px;width:24px;vertical-align:middle;"></a>

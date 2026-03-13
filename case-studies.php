@@ -7,18 +7,20 @@
   <meta name="description" content="See how Eclipse Water Technologies delivers reliable DI water, softening, and carbon filtration solutions across Canadian industries with measurable results." />
   <meta name="keywords" content="water treatment case studies, DI water success stories, Canadian water solutions, Eclipse Water Technologies" />
   <meta name="author" content="Eclipse Water Technologies" />
+  <link rel="canonical" href="https://eclipsewatertechnologies.com/case-studies.php" />
+  <link rel="icon" href="https://eclipsewatertechnologies.com/Eclipselogo2026.png" type="image/png" />
   <!-- Open Graph -->
   <meta property="og:title" content="Case Studies | Eclipse Water Technologies" />
   <meta property="og:description" content="Reliable DI water, softening, and carbon filtration solutions across Canadian industries with measurable results." />
-  <meta property="og:image" content="Eclipselogo2026.png" />
-  <meta property="og:url" content="https://eclipsewatertechnologies.com/case-studies.html" />
+  <meta property="og:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
+  <meta property="og:url" content="https://eclipsewatertechnologies.com/case-studies.php" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="en_CA" />
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Case Studies | Eclipse Water Technologies" />
   <meta name="twitter:description" content="Reliable DI water, softening, and carbon filtration solutions across Canadian industries with measurable results." />
-  <meta name="twitter:image" content="Eclipselogo2026.png" />
+  <meta name="twitter:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
   <meta name="twitter:site" content="@EclipseWaterTech" />
   <!-- Article Schema -->
   <script type="application/ld+json">
@@ -26,7 +28,7 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Case Studies | Eclipse Water Technologies",
-    "image": "Eclipselogo2026.png",
+    "image": "https://eclipsewatertechnologies.com/Eclipselogo2026.png",
     "author": {
       "@type": "Organization",
       "name": "Eclipse Water Technologies"
@@ -36,7 +38,7 @@
       "name": "Eclipse Water Technologies",
       "logo": {
         "@type": "ImageObject",
-        "url": "Eclipselogo2026.png"
+        "url": "https://eclipsewatertechnologies.com/Eclipselogo2026.png"
       }
     },
     "description": "Reliable DI water, softening, and carbon filtration solutions across Canadian industries with measurable results."

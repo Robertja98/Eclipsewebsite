@@ -8,14 +8,14 @@
   <meta name="description" content="Explore Eclipse Water Technologies' Canadian water treatment services: DI systems, water softeners, and activated carbon filtration. No tariffs, stable pricing." />
   <meta name="keywords" content="Canadian water treatment services, DI systems Canada, water softeners, activated carbon filtration, Eclipse Water Technologies" />
   <meta name="author" content="Eclipse Water Technologies" />
-  <link rel="canonical" href="https://eclipsewatertechnologies.com/services.html" />
-  <link rel="icon" href="https://eclipsewatertechnologies.com/images/favicon.ico" type="image/x-icon" />
+  <link rel="canonical" href="https://eclipsewatertechnologies.com/services.php" />
+  <link rel="icon" href="https://eclipsewatertechnologies.com/Eclipselogo2026.png" type="image/png" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Canadian Water Treatment Services | Eclipse Water Technologies" />
   <meta property="og:description" content="Proudly Canadian DI systems, softeners, and filtration. No tariffs, stable pricing, expert service." />
-  <meta property="og:image" content="https://eclipsewatertechnologies.com/images/canadian-logo.png" />
-  <meta property="og:url" content="https://eclipsewatertechnologies.com/services.html" />
+  <meta property="og:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
+  <meta property="og:url" content="https://eclipsewatertechnologies.com/services.php" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_CA" />
 
@@ -23,7 +23,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Canadian Water Treatment Services | Eclipse Water Technologies" />
   <meta name="twitter:description" content="DI systems, softeners, and filtration. Proudly Canadian. No tariffs." />
-  <meta name="twitter:image" content="https://eclipsewatertechnologies.com/images/canadian-logo.png" />
+  <meta name="twitter:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
   <meta name="twitter:site" content="@EclipseWaterTech" />
 
   <link rel="stylesheet" href="styles.css" />

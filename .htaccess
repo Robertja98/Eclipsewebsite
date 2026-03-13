@@ -1,0 +1,16 @@
+DirectoryIndex index.php
+
+RewriteEngine On
+
+RewriteRule ^index\.html$ / [R=301,L,NC]
+RewriteRule ^index\.php$ / [R=301,L,NC]
+RewriteRule ^about\.html$ /about.php [R=301,L,NC]
+RewriteRule ^contact\.html$ /contact.php [R=301,L,NC]
+RewriteRule ^services\.html$ /services.php [R=301,L,NC]
+RewriteRule ^industries\.html$ /industries.php [R=301,L,NC]
+RewriteRule ^explore-our-solutions\.html$ /explore-our-solutions.php [R=301,L,NC]
+RewriteRule ^specs\.html$ /specs.php [R=301,L,NC]
+RewriteRule ^case-studies\.html$ /case-studies.php [R=301,L,NC]
+RewriteRule ^case-study-hospitals\.html$ /hospitals.php [R=301,L,NC]
+RewriteRule ^case-study-metal\.html$ /metalfinishing.php [R=301,L,NC]
+RewriteRule ^case-study-lab\.html$ /labratoryusecase.php [R=301,L,NC]

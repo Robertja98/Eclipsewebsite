@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Eclipse Water Technologies</title>
   <meta name="description" content="Get in touch with Eclipse Water Technologies. Reach out to Robert Lee, CET, PMP for expert water treatment solutions." />
+  <link rel="canonical" href="https://eclipsewatertechnologies.com/contact.php" />
+  <link rel="icon" href="https://eclipsewatertechnologies.com/Eclipselogo2026.png" type="image/png" />
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>

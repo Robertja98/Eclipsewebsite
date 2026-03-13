@@ -8,18 +8,20 @@
   <meta name="description" content="Comprehensive technical specifications for Eclipse Water Technologies DI and filtration systems, including tank models, construction, and operating parameters." />
   <meta name="keywords" content="DI tank specifications, high flow, water treatment, resin, Eclipse Water Technologies" />
   <meta name="author" content="Eclipse Water Technologies" />
+  <link rel="canonical" href="https://eclipsewatertechnologies.com/specs.php" />
+  <link rel="icon" href="https://eclipsewatertechnologies.com/Eclipselogo2026.png" type="image/png" />
   <!-- Open Graph -->
   <meta property="og:title" content="Technical Specifications | Eclipse Water Technologies" />
   <meta property="og:description" content="Comprehensive technical specifications for Eclipse Water Technologies DI and filtration systems." />
-  <meta property="og:image" content="Eclipselogo2026.png" />
-  <meta property="og:url" content="https://eclipsewatertechnologies.com/specs.html" />
+  <meta property="og:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
+  <meta property="og:url" content="https://eclipsewatertechnologies.com/specs.php" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_CA" />
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Technical Specifications | Eclipse Water Technologies" />
   <meta name="twitter:description" content="Comprehensive technical specifications for Eclipse Water Technologies DI and filtration systems." />
-  <meta name="twitter:image" content="Eclipselogo2026.png" />
+  <meta name="twitter:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
   <meta name="twitter:site" content="@EclipseWaterTech" />
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -235,9 +237,9 @@
         <p>Proudly Canadian. Not affected by U.S. tariffs.</p>
       </div>
       <div>
-        <a href="services.html">Services</a><br />
-        <a href="industries.html">Industries</a><br />
-        <a href="contact.html">Contact</a>
+        <a href="services.php">Services</a><br />
+        <a href="industries.php">Industries</a><br />
+        <a href="contact.php">Contact</a>
       </div>
       <div class="social-links">
         <a href="https://www.facebook.com/eclipsewatertechnologies" target="_blank" aria-label="Facebook">
@@ -251,7 +253,7 @@
         </a>
       </div>
       <div style="display: flex; gap: 1.2rem; align-items: center;">
-        <a href="contact.html" class="btn btn-small">Talk to us</a>
+        <a href="contact.php" class="btn btn-small">Talk to us</a>
         <a href="https://www.linkedin.com/company/eclipse-water-technologies" target="_blank" aria-label="LinkedIn" style="margin-left:0.5rem;">
           <img src="linkedin-icon.svg" alt="LinkedIn" style="height:24px;width:24px;vertical-align:middle;">
         </a>
@@ -277,6 +279,5 @@
       });
     });
   </script>
-  <footer class="site-footer"></footer>
 </body>
 </html>

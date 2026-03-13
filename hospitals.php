@@ -8,15 +8,22 @@
   <meta name="description" content="Eclipse Water Technologies provides DI tanks and scheduled service for hospitals in Eastern Ontario, supporting sterilization, lab prep, and equipment rinse." />
   <meta name="keywords" content="hospital DI water, Eastern Ontario water treatment, Eclipse Water Technologies, medical water systems, sterilization rinse water" />
   <meta name="author" content="Eclipse Water Technologies" />
-  <link rel="canonical" href="https://eclipsewatertechnologies.com/case-study-hospitals.html" />
-  <link rel="icon" href="https://eclipsewatertechnologies.com/images/favicon.ico" type="image/x-icon" />
+  <link rel="canonical" href="https://eclipsewatertechnologies.com/hospitals.php" />
+  <link rel="icon" href="https://eclipsewatertechnologies.com/Eclipselogo2026.png" type="image/png" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Case Study | DI Water Service for Eastern Ontario Hospitals" />
   <meta property="og:description" content="Reliable DI tank service for sterilization and lab rinse water across hospitals in Eastern Ontario." />
-  <meta property="og:url" content="https://eclipsewatertechnologies.com/case-study-hospitals.html" />
+  <meta property="og:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
+  <meta property="og:url" content="https://eclipsewatertechnologies.com/hospitals.php" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="en_CA" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Case Study | DI Water Service for Eastern Ontario Hospitals" />
+  <meta name="twitter:description" content="Reliable DI tank service for sterilization and lab rinse water across hospitals in Eastern Ontario." />
+  <meta name="twitter:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
+  <meta name="twitter:site" content="@EclipseWaterTech" />
 
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">

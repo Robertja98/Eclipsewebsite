@@ -9,17 +9,17 @@
   <meta name="description" content="Eclipse Water Technologies serves industries across Canada with DI water systems, softeners, and carbon filtration — from pharma to electronics and food & beverage." />
   <meta name="keywords" content="industries using DI water, Canadian industrial water treatment, pharmaceutical water systems, electronics water systems, food and beverage water treatment" />
   <meta name="author" content="Eclipse Water Technologies" />
-  <link rel="canonical" href="https://eclipsewatertechnologies.com/industries.html" />
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="canonical" href="https://eclipsewatertechnologies.com/industries.php" />
+  <link rel="icon" href="https://eclipsewatertechnologies.com/Eclipselogo2026.png" type="image/png" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Industries Served | Eclipse Water Technologies" />
   <meta property="og:description" content="Canadian DI water, softeners, and filtration solutions for pharma, electronics, food & beverage, automotive, labs, and more." />
-  <meta property="og:image" content="https://eclipsewatertechnologies.com/canadian-logo.png" />
+  <meta property="og:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Eclipse Water Technologies Canadian Maple Leaf Logo" />
-  <meta property="og:url" content="https://eclipsewatertechnologies.com/industries.html" />
+  <meta property="og:image:alt" content="Eclipse Water Technologies New Logo" />
+  <meta property="og:url" content="https://eclipsewatertechnologies.com/industries.php" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_CA" />
 
@@ -27,7 +27,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Industries Served | Eclipse Water Technologies" />
   <meta name="twitter:description" content="Canadian DI water, softeners, and filtration solutions for pharma, electronics, food & beverage, automotive, labs, and more." />
-  <meta name="twitter:image" content="https://eclipsewatertechnologies.com/images/canadian-logo.png" />
+  <meta name="twitter:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
   <meta name="twitter:site" content="@EclipseWaterTech" />
 
   <!-- Social Profile Links -->
@@ -41,10 +41,10 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Eclipse Water Technologies",
-    "url": "https://eclipsewatertechnologies.com/industries.html",
-    "image": "https://eclipsewatertechnologies.com/images/canadian-logo.png",
+    "url": "https://eclipsewatertechnologies.com/industries.php",
+    "image": "https://eclipsewatertechnologies.com/Eclipselogo2026.png",
     "description": "Canadian DI water, softeners, and filtration solutions for pharma, electronics, food & beverage, automotive, labs, and more.",
-    "telephone": "+1-416-555-1234",
+    "telephone": "+1-647-355-0944",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Toronto",

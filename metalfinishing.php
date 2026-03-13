@@ -8,15 +8,22 @@
   <meta name="description" content="Eclipse Water Technologies helped a Toronto metal finishing plant reduce resin regeneration frequency through system reconfiguration and flow analysis." />
   <meta name="keywords" content="metal finishing water treatment, DI resin optimization, Eclipse Water Technologies, Toronto plating facility, regeneration frequency" />
   <meta name="author" content="Eclipse Water Technologies" />
-  <link rel="canonical" href="https://eclipsewatertechnologies.com/case-study-metal.html" />
-  <link rel="icon" href="https://eclipsewatertechnologies.com/images/favicon.ico" type="image/x-icon" />
+  <link rel="canonical" href="https://eclipsewatertechnologies.com/metalfinishing.php" />
+  <link rel="icon" href="https://eclipsewatertechnologies.com/Eclipselogo2026.png" type="image/png" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Case Study | Resin Optimization for Metal Finishing" />
   <meta property="og:description" content="Reducing regeneration frequency through system reconfiguration for a high-throughput plating facility in Toronto." />
-  <meta property="og:url" content="https://eclipsewatertechnologies.com/case-study-metal.html" />
+  <meta property="og:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
+  <meta property="og:url" content="https://eclipsewatertechnologies.com/metalfinishing.php" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="en_CA" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Case Study | Resin Optimization for Metal Finishing" />
+  <meta name="twitter:description" content="Reducing regeneration frequency through system reconfiguration for a high-throughput plating facility in Toronto." />
+  <meta name="twitter:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
+  <meta name="twitter:site" content="@EclipseWaterTech" />
 
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
