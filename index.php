@@ -5,14 +5,14 @@
   <!-- SEO + Social Optimized Head -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eclipse Water Technologies | Canadian DI Water Systems, Softeners & Filtration</title>
-  <meta name="description" content="Canadian DI water systems, softeners, and filtration for industrial and commercial clients with stable pricing, dependable supply, and expert service." />
+  <title>Eclipse Water Technologies | SDI GTA & Deionized Water Systems</title>
+  <meta name="description" content="Canadian SDI GTA and deionized water systems, DI tanks, softeners, and filtration for industrial and commercial clients with stable pricing and dependable service." />
   <meta name="keywords" content="Canadian water treatment, deionized water systems, DI tanks, industrial water softeners, activated carbon filtration, high purity water, Eclipse Water Technologies, no tariffs, industrial water solutions Canada" />
   <meta name="author" content="Eclipse Water Technologies" />
   <link rel="canonical" href="https://eclipsewatertechnologies.com/" />
   <!-- Open Graph -->
-  <meta property="og:title" content="Eclipse Water Technologies | Pure Water. Pure Confidence." />
-  <meta property="og:description" content="Proudly Canadian DI water systems, softeners, and filtration. No tariffs, stable pricing, expert service." />
+  <meta property="og:title" content="Eclipse Water Technologies | SDI GTA & Deionized Water Systems" />
+  <meta property="og:description" content="Canadian SDI GTA and deionized water systems, DI tanks, softeners, and filtration with stable pricing and dependable service." />
   <meta property="og:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -26,8 +26,8 @@
   <link rel="me" href="https://www.linkedin.com/company/eclipse-water-technologies" />
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Eclipse Water Technologies | Pure Water. Pure Confidence." />
-  <meta name="twitter:description" content="Canadian DI water systems, softeners, and filtration. No tariffs, stable pricing, expert service." />
+  <meta name="twitter:title" content="Eclipse Water Technologies | SDI GTA & Deionized Water Systems" />
+  <meta name="twitter:description" content="Canadian SDI GTA and deionized water systems, DI tanks, softeners, and filtration with stable pricing and dependable service." />
   <meta name="twitter:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
   <meta name="twitter:site" content="@EclipseWaterTech" />
   <!-- Local Business Schema -->
