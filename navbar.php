@@ -11,6 +11,7 @@
         <li><a href="explore-our-solutions.php">Solutions</a></li>
         <li><a href="specs.php">Technical Specs</a></li>
         <li><a href="case-studies.php">Case Studies</a></li>
+        <li><a href="project-management-service.php">Project Management</a></li>
         <li><a href="contact.php" class="btn btn-small">Contact</a></li>
       </ul>
     </nav>
