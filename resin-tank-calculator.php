@@ -56,24 +56,120 @@
                 </div>
             </form>
             <div class="calc-results" id="results" style="display:none;"></div>
-            <button id="downloadPDF" style="display:none;margin-top:1.2em;background:#0099A8;color:#fff;border:none;border-radius:4px;padding:0.5em 1.2em;font-weight:600;font-size:1em;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s;" disabled>Download PDF Report</button>
-            <div id="pdfWaitMsg" style="display:none;color:#b00;font-size:1em;margin-top:0.5em;">PDF library is still loading. Please wait...</div>
+            <button id="downloadTXT" style="display:none;margin-top:1.2em;background:#0099A8;color:#fff;border:none;border-radius:4px;padding:0.5em 1.2em;font-weight:600;font-size:1em;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s;">Download TXT Report</button>
         </div>
     <script src="load-jspdf.js"></script>
         <script>
-        // Wait for jsPDF to load, then enable the button
-        function enablePDFButtonWhenReady() {
-            var check = setInterval(function() {
-                if (window.jspdf && window.jspdf.jsPDF) {
-                    document.getElementById('downloadPDF').disabled = false;
-                    document.getElementById('pdfWaitMsg').style.display = 'none';
-                    clearInterval(check);
-                } else {
-                    document.getElementById('pdfWaitMsg').style.display = 'block';
-                }
-            }, 200);
+        // Download TXT logic
+        function buildTxtReport(data) {
+            return (
+    `Eclipse Water Technologies SDI Tank Sizing Report\n\n` +
+    `Date: ${data.date}\n\n` +
+    `Inputs:\n` +
+    `Feedwater Conductivity: ${data.conductivity} microseimen per cm\n` +
+    `Feedwater TDS: ${data.tds} mg/L\n` +
+    `Feedwater CO2: ${data.co2} mg/L\n` +
+    `Grains Loading: ${data.grainsLoading} grains/USG\n` +
+    `Flow Rate: ${data.flowRange} USGPM\n` +
+    `Hours per Day: ${data.hours}\n\n` +
+    `Calculation Steps:\n` +
+    `1. Grains Loading Formula:\n` +
+    `   Grains Loading = (TDS + CO2) / 17.1\n` +
+    `   = (${data.tds} + ${data.co2}) / 17.1 = ${data.grainsLoading} grains/USG\n\n` +
+    `2. Tank Capacity Formula:\n` +
+    `   Tank Capacity = (Resin Volume x 12,000) / Grains Loading\n` +
+    `   = (${data.resin} x 12,000) / ${data.grainsLoading} = ${data.tankCapacity} USG\n\n` +
+    `3. Days to Exchange:\n` +
+    `   Gallons per Day = Flow Rate x 60 x Hours\n` +
+    `   = ${data.flowRange} x 60 x ${data.hours} = ${data.gallonsPerDay} USG/day\n` +
+    `   Days to Exchange = Tank Capacity / Gallons per Day\n` +
+    `   = ${data.tankCapacity} / ${data.gallonsPerDay} = ${data.daysToExchange} days\n\n` +
+    `Results:\n` +
+    `Recommended Tank: ${data.tankLabel}\n` +
+    `Tank Capacity: ${data.tankCapacity} USG\n` +
+    `Estimated Days to Exchange: ${data.daysToExchange} days\n\n` +
+    `Assumptions:\n` +
+    `• TDS (mg/L) = Conductivity (microseimen per cm) x 0.67\n` +
+    `• Standard resin capacity per tank model (12,000 grains/ft³)\n\n` +
+    `Eclipse Water Technologies\n` +
+    `Website: eclipsewatertechnologies.com\n` +
+    `Phone: 647 355 0944\n` +
+    `Email: rlee@eclipsewatertechnologies.com\n` +
+    `To order a tank or discuss your application, contact us or visit our website.\n`
+            );
         }
-        enablePDFButtonWhenReady();
+
+        document.getElementById('tankCalc').onsubmit = function(e) {
+            e.preventDefault();
+            // Get values
+            let tds = parseFloat(document.getElementById('tds').value);
+            let co2 = parseFloat(document.getElementById('co2').value);
+            let grainsLoading = parseFloat(document.getElementById('grainsLoading') ? document.getElementById('grainsLoading').value : 3.0);
+            // If advanced is hidden, recalc grains loading from TDS/CO2
+            if (document.getElementById('advancedOptions').style.display === 'none') {
+                grainsLoading = ((tds + co2) / 17.1).toFixed(2);
+            }
+            // Tank models and capacities
+            const tanks = [
+                {label: '8x44 (1.0 ft³)', resin: 1.0, capacity: 12500, flow: 3},
+                {label: '14x47 (3.5 ft³)', resin: 3.5, capacity: 35000, flow: 8},
+                {label: '21x62 (7.0 ft³)', resin: 7.0, capacity: 70000, flow: 15},
+                {label: 'Jumbo (42 ft³)', resin: 42, capacity: 420000, flow: 60}
+            ];
+            const flowRange = parseFloat(document.getElementById('flowRange').value);
+            const hours = parseFloat(document.getElementById('hours').value);
+            // Find recommended tank
+            let recommended = tanks[0];
+            for (let i = 0; i < tanks.length; i++) {
+                if (flowRange <= tanks[i].flow) {
+                    recommended = tanks[i];
+                    break;
+                }
+            }
+            // Always use the formula for tank capacity
+            let tankCapacity = ((12000 * recommended.resin) / grainsLoading).toFixed(1);
+            const gallonsPerDay = (flowRange * 60 * hours).toFixed(0);
+            const daysToExchange = (tankCapacity / gallonsPerDay).toFixed(1);
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('results').innerHTML = `
+                <strong>Recommended Tank:</strong> ${recommended.label}<br>
+                <strong>Tank Capacity:</strong> ${parseInt(tankCapacity).toLocaleString()} USG<br>
+                <strong>Estimated Days to Exchange:</strong> ${daysToExchange} days<br>
+                <hr style="margin:1em 0;">
+                <strong>Grains Loading Calculation:</strong><br>
+                <span style="font-size:0.98em;">${grainsLoadingFormula(tds, co2)} = <strong>${grainsLoading}</strong> grains/USG</span><br>
+                <span style="font-size:0.98em;color:#0099A8;">TDS (mg/L) ≈ Conductivity (μS/cm) × 0.67</span><br>
+                <span style="font-size:0.98em;color:#0099A8;">Assumptions: TDS ${tds} mg/L, CO₂ ${co2} mg/L, Grains Loading ${grainsLoading} grains/USG</span>
+            `;
+            // Show TXT button
+            var txtBtn = document.getElementById('downloadTXT');
+            if (txtBtn) {
+                txtBtn.style.display = 'inline-block';
+                txtBtn.onclick = function() {
+                    const txt = buildTxtReport({
+                        date: new Date().toLocaleString(),
+                        conductivity: document.getElementById('conductivity').value,
+                        tds,
+                        co2,
+                        grainsLoading,
+                        flowRange,
+                        hours,
+                        resin: recommended.resin,
+                        tankCapacity: parseInt(tankCapacity).toLocaleString(),
+                        gallonsPerDay,
+                        daysToExchange,
+                        tankLabel: recommended.label
+                    });
+                    const blob = new Blob([txt], {type: 'text/plain'});
+                    const a = document.createElement('a');
+                    a.href = URL.createObjectURL(blob);
+                    a.download = 'SDI_Tank_Sizing_Report.txt';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                };
+            }
+        };
         </script>
     <script>
                 // Auto-calculate TDS from conductivity unless user overrides in advanced
@@ -154,116 +250,36 @@
                 <span style="font-size:0.98em;color:#0099A8;">TDS (mg/L) ≈ Conductivity (μS/cm) × 0.67</span><br>
                 <span style="font-size:0.98em;color:#0099A8;">Assumptions: TDS ${tds} mg/L, CO₂ ${co2} mg/L, Grains Loading ${grainsLoading} grains/USG</span>
             `;
-            // Show PDF button
-            const pdfBtn = document.getElementById('downloadPDF');
-            pdfBtn.style.display = 'inline-block';
-            pdfBtn.onclick = function() {
-                if (!window.jspdf && window.jspdf === undefined && !window.jsPDFLoaded) {
-                    alert('PDF library not loaded yet. Please wait a moment and try again.');
-                    return;
-                }
-                const { jsPDF } = window.jspdf || window.jspdf || {};
-                const doc = new jsPDF();
-                let y = 15;
-                // Logo removed for compatibility
-                // Draw dark blue header background
-                doc.setFillColor(0,51,102);
-                doc.rect(0, y-7, 210, 13, 'F');
-                // White header text
-                doc.setFontSize(16);
-                doc.setTextColor(255,255,255);
-                doc.text('Eclipse Water Technologies SDI Tank Sizing Report', 105, y, {align:'center'});
-                y += 10;
-                // Set light gray for all main text
-                doc.setTextColor(80,80,80);
-                doc.setFontSize(12);
-                doc.text('Date: ' + new Date().toLocaleString(), 14, y);
-                y += 10;
-                doc.setFontSize(13);
-                doc.text('Inputs:', 14, y);
-                y += 8;
-                doc.setFontSize(11);
-                // Use monospace for all input lines
-                doc.setFont('courier', 'normal');
-                doc.text(`Feedwater Conductivity: ${document.getElementById('conductivity').value} microseimen per cm`, 14, y);
-                y += 7;
-                doc.text(`Feedwater TDS: ${tds} mg/L`, 14, y);
-                y += 7;
-                doc.text(`Feedwater CO2: ${co2} mg/L`, 14, y);
-                y += 7;
-                doc.text(`Grains Loading: ${grainsLoading} grains/USG`, 14, y);
-                y += 7;
-                doc.text(`Flow Rate: ${flowRange} USGPM`, 14, y);
-                y += 7;
-                doc.text(`Hours per Day: ${hours}`, 14, y);
-                y += 10;
-                doc.setFont('helvetica', 'normal');
-                doc.setFontSize(13);
-                doc.text('Calculation Steps:', 14, y);
-                y += 8;
-                doc.setFontSize(11);
-                doc.setFont('courier', 'normal');
-                doc.text('1. Grains Loading Formula:', 14, y);
-                y += 7;
-                doc.text('   Grains Loading = (TDS + CO2) / 17.1', 18, y);
-                y += 7;
-                doc.text(`   = (${tds} + ${co2}) / 17.1 = ${grainsLoading} grains/USG`, 18, y);
-                y += 10;
-                doc.text('2. Tank Capacity Formula:', 14, y);
-                y += 7;
-                doc.text('   Tank Capacity = (Resin Volume x 12,000) / Grains Loading', 18, y);
-                y += 7;
-                doc.text(`   = (${recommended.resin} x 12,000) / ${grainsLoading} = ${parseInt(tankCapacity).toLocaleString()} USG`, 18, y);
-                y += 10;
-                doc.text('3. Days to Exchange:', 14, y);
-                y += 7;
-                doc.text('   Gallons per Day = Flow Rate x 60 x Hours', 18, y);
-                y += 7;
-                doc.text(`   = ${flowRange} x 60 x ${hours} = ${gallonsPerDay} USG/day`, 18, y);
-                y += 7;
-                doc.text('   Days to Exchange = Tank Capacity / Gallons per Day', 18, y);
-                y += 7;
-                doc.text(`   = ${parseInt(tankCapacity).toLocaleString()} / ${gallonsPerDay} = ${daysToExchange} days`, 18, y);
-                y += 10;
-                doc.setFont('helvetica', 'normal');
-                doc.setFontSize(13);
-                doc.text('Results:', 14, y);
-                y += 8;
-                doc.setFontSize(11);
-                doc.text(`Recommended Tank: ${recommended.label}`, 14, y);
-                y += 7;
-                doc.text(`Tank Capacity: ${parseInt(tankCapacity).toLocaleString()} USG`, 14, y);
-                y += 7;
-                doc.text(`Estimated Days to Exchange: ${daysToExchange} days`, 14, y);
-                y += 10;
-                doc.setFont('helvetica', 'normal');
-                doc.setFontSize(13);
-                doc.text('Assumptions:', 14, y);
-                y += 8;
-                doc.setFontSize(11);
-                doc.text('• TDS (mg/L) = Conductivity (microseimen per cm) x 0.67', 14, y);
-                doc.text('• Standard resin capacity per tank model (12,000 grains/ft³)', 14, y+7);
-                y += 18;
-                doc.setFontSize(12);
-                doc.setTextColor(0, 51, 102);
-                doc.text('Eclipse Water Technologies', 14, y);
-                y += 7;
-                doc.setFontSize(11);
-                doc.setTextColor(80, 80, 80); // Light gray for contact info
-                doc.text('Website: eclipsewatertechnologies.com', 14, y);
-                y += 6;
-                doc.text('Phone: 647 355 0944', 14, y);
-                y += 6;
-                doc.text('Email: rlee@eclipsewatertechnologies.com', 14, y);
-                y += 8;
-                doc.setFontSize(11);
-                doc.setTextColor(0, 51, 102);
-                doc.text('To order a tank or discuss your application, contact us or visit our website.', 14, y);
-                doc.setTextColor(0, 0, 0);
-                doc.save('Resin_Tank_Sizing_Report.pdf');
-            };
+            // Show TXT button
+            var txtBtn = document.getElementById('downloadTXT');
+            if (txtBtn) {
+                txtBtn.style.display = 'inline-block';
+                txtBtn.onclick = function() {
+                    const txt = buildTxtReport({
+                        date: new Date().toLocaleString(),
+                        conductivity: document.getElementById('conductivity').value,
+                        tds,
+                        co2,
+                        grainsLoading,
+                        flowRange,
+                        hours,
+                        resin: recommended.resin,
+                        tankCapacity: parseInt(tankCapacity).toLocaleString(),
+                        gallonsPerDay,
+                        daysToExchange,
+                        tankLabel: recommended.label
+                    });
+                    const blob = new Blob([txt], {type: 'text/plain'});
+                    const a = document.createElement('a');
+                    a.href = URL.createObjectURL(blob);
+                    a.download = 'SDI_Tank_Sizing_Report.txt';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                };
+            }
         };
-    </script>
-    <?php include 'Cancellation Page/layout_end.php'; ?>
-</body>
-</html>
+        </script>
+        <?php include 'Cancellation Page/layout_end.php'; ?>
+    </body>
+    </html>
