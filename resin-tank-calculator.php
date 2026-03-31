@@ -56,9 +56,25 @@
                 </div>
             </form>
             <div class="calc-results" id="results" style="display:none;"></div>
-            <button id="downloadPDF" style="display:none;margin-top:1.2em;background:#0099A8;color:#fff;border:none;border-radius:4px;padding:0.5em 1.2em;font-weight:600;font-size:1em;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s;">Download PDF Report</button>
+            <button id="downloadPDF" style="display:none;margin-top:1.2em;background:#0099A8;color:#fff;border:none;border-radius:4px;padding:0.5em 1.2em;font-weight:600;font-size:1em;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s;" disabled>Download PDF Report</button>
+            <div id="pdfWaitMsg" style="display:none;color:#b00;font-size:1em;margin-top:0.5em;">PDF library is still loading. Please wait...</div>
         </div>
     <script src="load-jspdf.js"></script>
+        <script>
+        // Wait for jsPDF to load, then enable the button
+        function enablePDFButtonWhenReady() {
+            var check = setInterval(function() {
+                if (window.jspdf && window.jspdf.jsPDF) {
+                    document.getElementById('downloadPDF').disabled = false;
+                    document.getElementById('pdfWaitMsg').style.display = 'none';
+                    clearInterval(check);
+                } else {
+                    document.getElementById('pdfWaitMsg').style.display = 'block';
+                }
+            }, 200);
+        }
+        enablePDFButtonWhenReady();
+        </script>
     <script>
                 // Auto-calculate TDS from conductivity unless user overrides in advanced
                 function updateTDSfromConductivity() {
