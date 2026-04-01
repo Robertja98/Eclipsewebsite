@@ -3,19 +3,73 @@
             <form id="tankCalc" autocomplete="off">
                 <div class="calc-section">
                     <h2>Step 1: Your Water Usage</h2>
-                    <label for="flowRange">What is your typical flow rate?</label>
-                    <span class="info">If unsure, estimate the average flow in gallons per minute (gpm) your process or equipment uses.</span>
-                    <select id="flowRange" required>
-                        <option value="3">1–5 gpm (small lab, glasswasher, etc.)</option>
-                        <option value="8">5–10 gpm (medium process, small production)</option>
-                        <option value="15">10–20 gpm (large process, multiple outlets)</option>
-                        <option value="30">20–40 gpm (industrial, large system)</option>
-                        <option value="60">40–80 gpm (very large system)</option>
-                        <option value="100">80–120 gpm (multiple large systems)</option>
-                    </select>
-                    <label for="hours">How many hours per day do you use water?</label>
-                    <span class="info">Estimate the number of hours your system runs each day.</span>
-                    <input type="number" id="hours" value="8" min="0" step="0.1" required>
+                    <span class="info">Reference the chart below to estimate your typical flow rate and see the USG capacity for each tank model.</span>
+                    <table style="width:100%;margin-bottom:1em;border-collapse:collapse;text-align:center;">
+                        <thead>
+                            <tr style="background:#eaf7f0;">
+                                <th>Application</th>
+                                <th>Flow Range (GPM)</th>
+                                <th>Recommended Tank Model</th>
+                                <th>USG Capacity*</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Small lab, glasswasher</td>
+                                <td>1–5</td>
+                                <td>8x44 (1.0 ft³)</td>
+                                <td>1,200–1,500</td>
+                            </tr>
+                            <tr>
+                                <td>Medium process, small production</td>
+                                <td>5–10</td>
+                                <td>14x47 (3.5 ft³)</td>
+                                <td>3,500–4,500</td>
+                            </tr>
+                            <tr>
+                                <td>Large process, multiple outlets</td>
+                                <td>10–20</td>
+                                <td>21x62 (7.0 ft³)</td>
+                                <td>7,000–9,000</td>
+                            </tr>
+                            <tr>
+                                <td>Industrial, large system</td>
+                                <td>20–40</td>
+                                <td>Jumbo (42 ft³)</td>
+                                <td>42,000–50,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="width:100%;max-width:600px;margin-bottom:1em;border-collapse:separate;border-spacing:0 0.5em;">
+                        <tr>
+                            <td style="width:45%;vertical-align:top;font-weight:600;">Select your typical flow rate:</td>
+                            <td style="width:55%;vertical-align:top;">
+                                <select id="flowRange" required style="width:100%;">
+                                    <option value="3">1–5 gpm (small lab, glasswasher, etc.)</option>
+                                    <option value="8">5–10 gpm (medium process, small production)</option>
+                                    <option value="15">10–20 gpm (large process, multiple outlets)</option>
+                                    <option value="30">20–40 gpm (industrial, large system)</option>
+                                    <option value="60">40–80 gpm (very large system)</option>
+                                    <option value="100">80–120 gpm (multiple large systems)</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align:top;font-weight:600;">How many hours per day do you use water?</td>
+                            <td style="vertical-align:top;">
+                                <input type="number" id="hours" value="8" min="0" step="0.1" required style="width:100%;max-width:120px;">
+                                <div style="font-size:0.97em;color:#888;">Estimate the number of hours your system runs each day.</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align:top;font-weight:600;">Number of Tanks (in series)</td>
+                            <td style="vertical-align:top;">
+                                <input type="number" id="numTanks" value="1" min="1" max="10" step="1" required style="width:100%;max-width:120px;">
+                                <div style="font-size:0.97em;color:#888;">How many tanks will be used in series (one after another)?</div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="font-size:0.95em;color:#888;margin-top:0.5em;">*USG capacity is an estimate and will be refined by your water quality in later steps.</div>
                 </div>
                 <div class="calc-section">
                     <h2>Step 2: Water Quality (Optional)</h2>
@@ -29,15 +83,29 @@
                         <button type="button" id="toggleAdvanced" style="margin-bottom:0.5em; background:#0099A8; color:#fff; border:none; border-radius:4px; padding:0.5em 1.2em; font-weight:600; font-size:1em; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.07); transition:background 0.2s;">Show Advanced Options</button>
                     </div>
                     <div id="advancedOptions" style="display:none;background:#fafdff;border:1px solid #d9eff2;border-radius:8px;padding:1rem;margin-bottom:1rem;">
-                        <label for="tds">Feedwater TDS (mg/L)</label>
-                        <span class="info">TDS (Total Dissolved Solids) is usually about 0.67 × conductivity. You can override this if you have a lab value.</span>
-                        <input type="number" id="tds" value="50" min="0" step="0.1">
-                        <label for="co2">Feedwater CO₂ (mg/L)</label>
-                        <span class="info">CO₂ is typically 1–5 mg/L in municipal water. If unsure, leave as default.</span>
-                        <input type="number" id="co2" value="2" min="0" step="0.1">
-                        <label for="grainsLoading">Grains Loading (grains/USG)</label>
-                        <span class="info">Calculated as (TDS + CO₂) / 17.1. Lower grains loading means higher purity water and less capacity per tank.</span>
-                        <input type="number" id="grainsLoading" value="3.0" min="0.1" step="0.01">
+                        <table style="width:100%;max-width:600px;margin-bottom:0.5em;border-collapse:separate;border-spacing:0 0.5em;">
+                            <tr>
+                                <td style="width:38%;vertical-align:top;font-weight:600;">Feedwater TDS (mg/L)</td>
+                                <td style="width:62%;vertical-align:top;">
+                                    <input type="number" id="tds" value="50" min="0" step="0.1" style="width:100%;max-width:120px;">
+                                    <div style="font-size:0.97em;color:#888;">TDS (Total Dissolved Solids) is usually about 0.67 × conductivity. You can override this if you have a lab value.</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align:top;font-weight:600;">Feedwater CO₂ (mg/L)</td>
+                                <td style="vertical-align:top;">
+                                    <input type="number" id="co2" value="2" min="0" step="0.1" style="width:100%;max-width:120px;">
+                                    <div style="font-size:0.97em;color:#888;">CO₂ is typically 1–5 mg/L in municipal water. If unsure, leave as default.</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align:top;font-weight:600;">Grains Loading (grains/USG)</td>
+                                <td style="vertical-align:top;">
+                                    <input type="number" id="grainsLoading" value="3.0" min="0.1" step="0.01" style="width:100%;max-width:120px;">
+                                    <div style="font-size:0.97em;color:#888;">Calculated as (TDS + CO₂) / 17.1. Lower grains loading means higher purity water and less capacity per tank.</div>
+                                </td>
+                            </tr>
+                        </table>
                         <div style="font-size:0.97em;color:#0099A8;margin-top:0.7em;">Lower conductivity (higher purity) water will reduce grains loading and tank capacity. Adjust grains loading if your water is purer than typical feedwater.</div>
                     </div>
                     <div id="assumptionsBox" style="background:#fafdff;border:1px solid #d9eff2;border-radius:8px;padding:1rem;margin-bottom:1rem;">
@@ -58,119 +126,7 @@
             <div class="calc-results" id="results" style="display:none;"></div>
             <button id="downloadTXT" style="display:none;margin-top:1.2em;background:#0099A8;color:#fff;border:none;border-radius:4px;padding:0.5em 1.2em;font-weight:600;font-size:1em;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s;">Download TXT Report</button>
         </div>
-    <script src="load-jspdf.js"></script>
-        <script>
-        // Download TXT logic
-        function buildTxtReport(data) {
-            return (
-    `Eclipse Water Technologies SDI Tank Sizing Report\n\n` +
-    `Date: ${data.date}\n\n` +
-    `Inputs:\n` +
-    `Feedwater Conductivity: ${data.conductivity} microseimen per cm\n` +
-    `Feedwater TDS: ${data.tds} mg/L\n` +
-    `Feedwater CO2: ${data.co2} mg/L\n` +
-    `Grains Loading: ${data.grainsLoading} grains/USG\n` +
-    `Flow Rate: ${data.flowRange} USGPM\n` +
-    `Hours per Day: ${data.hours}\n\n` +
-    `Calculation Steps:\n` +
-    `1. Grains Loading Formula:\n` +
-    `   Grains Loading = (TDS + CO2) / 17.1\n` +
-    `   = (${data.tds} + ${data.co2}) / 17.1 = ${data.grainsLoading} grains/USG\n\n` +
-    `2. Tank Capacity Formula:\n` +
-    `   Tank Capacity = (Resin Volume x 12,000) / Grains Loading\n` +
-    `   = (${data.resin} x 12,000) / ${data.grainsLoading} = ${data.tankCapacity} USG\n\n` +
-    `3. Days to Exchange:\n` +
-    `   Gallons per Day = Flow Rate x 60 x Hours\n` +
-    `   = ${data.flowRange} x 60 x ${data.hours} = ${data.gallonsPerDay} USG/day\n` +
-    `   Days to Exchange = Tank Capacity / Gallons per Day\n` +
-    `   = ${data.tankCapacity} / ${data.gallonsPerDay} = ${data.daysToExchange} days\n\n` +
-    `Results:\n` +
-    `Recommended Tank: ${data.tankLabel}\n` +
-    `Tank Capacity: ${data.tankCapacity} USG\n` +
-    `Estimated Days to Exchange: ${data.daysToExchange} days\n\n` +
-    `Assumptions:\n` +
-    `• TDS (mg/L) = Conductivity (microseimen per cm) x 0.67\n` +
-    `• Standard resin capacity per tank model (12,000 grains/ft³)\n\n` +
-    `Eclipse Water Technologies\n` +
-    `Website: eclipsewatertechnologies.com\n` +
-    `Phone: 647 355 0944\n` +
-    `Email: rlee@eclipsewatertechnologies.com\n` +
-    `To order a tank or discuss your application, contact us or visit our website.\n`
-            );
-        }
-
-        document.getElementById('tankCalc').onsubmit = function(e) {
-            e.preventDefault();
-            // Get values
-            let tds = parseFloat(document.getElementById('tds').value);
-            let co2 = parseFloat(document.getElementById('co2').value);
-            let grainsLoading = parseFloat(document.getElementById('grainsLoading') ? document.getElementById('grainsLoading').value : 3.0);
-            // If advanced is hidden, recalc grains loading from TDS/CO2
-            if (document.getElementById('advancedOptions').style.display === 'none') {
-                grainsLoading = ((tds + co2) / 17.1).toFixed(2);
-            }
-            // Tank models and capacities
-            const tanks = [
-                {label: '8x44 (1.0 ft³)', resin: 1.0, capacity: 12500, flow: 3},
-                {label: '14x47 (3.5 ft³)', resin: 3.5, capacity: 35000, flow: 8},
-                {label: '21x62 (7.0 ft³)', resin: 7.0, capacity: 70000, flow: 15},
-                {label: 'Jumbo (42 ft³)', resin: 42, capacity: 420000, flow: 60}
-            ];
-            const flowRange = parseFloat(document.getElementById('flowRange').value);
-            const hours = parseFloat(document.getElementById('hours').value);
-            // Find recommended tank
-            let recommended = tanks[0];
-            for (let i = 0; i < tanks.length; i++) {
-                if (flowRange <= tanks[i].flow) {
-                    recommended = tanks[i];
-                    break;
-                }
-            }
-            // Always use the formula for tank capacity
-            let tankCapacity = ((12000 * recommended.resin) / grainsLoading).toFixed(1);
-            const gallonsPerDay = (flowRange * 60 * hours).toFixed(0);
-            const daysToExchange = (tankCapacity / gallonsPerDay).toFixed(1);
-            document.getElementById('results').style.display = 'block';
-            document.getElementById('results').innerHTML = `
-                <strong>Recommended Tank:</strong> ${recommended.label}<br>
-                <strong>Tank Capacity:</strong> ${parseInt(tankCapacity).toLocaleString()} USG<br>
-                <strong>Estimated Days to Exchange:</strong> ${daysToExchange} days<br>
-                <hr style="margin:1em 0;">
-                <strong>Grains Loading Calculation:</strong><br>
-                <span style="font-size:0.98em;">${grainsLoadingFormula(tds, co2)} = <strong>${grainsLoading}</strong> grains/USG</span><br>
-                <span style="font-size:0.98em;color:#0099A8;">TDS (mg/L) ≈ Conductivity (μS/cm) × 0.67</span><br>
-                <span style="font-size:0.98em;color:#0099A8;">Assumptions: TDS ${tds} mg/L, CO₂ ${co2} mg/L, Grains Loading ${grainsLoading} grains/USG</span>
-            `;
-            // Show TXT button
-            var txtBtn = document.getElementById('downloadTXT');
-            if (txtBtn) {
-                txtBtn.style.display = 'inline-block';
-                txtBtn.onclick = function() {
-                    const txt = buildTxtReport({
-                        date: new Date().toLocaleString(),
-                        conductivity: document.getElementById('conductivity').value,
-                        tds,
-                        co2,
-                        grainsLoading,
-                        flowRange,
-                        hours,
-                        resin: recommended.resin,
-                        tankCapacity: parseInt(tankCapacity).toLocaleString(),
-                        gallonsPerDay,
-                        daysToExchange,
-                        tankLabel: recommended.label
-                    });
-                    const blob = new Blob([txt], {type: 'text/plain'});
-                    const a = document.createElement('a');
-                    a.href = URL.createObjectURL(blob);
-                    a.download = 'SDI_Tank_Sizing_Report.txt';
-                    document.body.appendChild(a);
-                    a.click();
-                    document.body.removeChild(a);
-                };
-            }
-        };
-        </script>
+    <!-- PDF logic removed, replaced with TXT download logic -->
     <script>
                 // Auto-calculate TDS from conductivity unless user overrides in advanced
                 function updateTDSfromConductivity() {
@@ -214,6 +170,7 @@
             let tds = parseFloat(document.getElementById('tds').value);
             let co2 = parseFloat(document.getElementById('co2').value);
             let grainsLoading = parseFloat(document.getElementById('grainsLoading') ? document.getElementById('grainsLoading').value : 3.0);
+            let numTanks = parseInt(document.getElementById('numTanks').value) || 1;
             // If advanced is hidden, recalc grains loading from TDS/CO2
             if (document.getElementById('advancedOptions').style.display === 'none') {
                 grainsLoading = ((tds + co2) / 17.1).toFixed(2);
@@ -235,15 +192,18 @@
                     break;
                 }
             }
-            // Always use the formula for tank capacity
-            let tankCapacity = ((12000 * recommended.resin) / grainsLoading).toFixed(1);
+            // In series: only one tank's capacity is used for service interval
+            let singleTankCapacity = ((12000 * recommended.resin) / grainsLoading).toFixed(1);
+            let totalCapacity = (singleTankCapacity * numTanks).toFixed(1);
             const gallonsPerDay = (flowRange * 60 * hours).toFixed(0);
-            const daysToExchange = (tankCapacity / gallonsPerDay).toFixed(1);
+            const daysToExchange = (singleTankCapacity / gallonsPerDay).toFixed(1);
             document.getElementById('results').style.display = 'block';
             document.getElementById('results').innerHTML = `
                 <strong>Recommended Tank:</strong> ${recommended.label}<br>
-                <strong>Tank Capacity:</strong> ${parseInt(tankCapacity).toLocaleString()} USG<br>
-                <strong>Estimated Days to Exchange:</strong> ${daysToExchange} days<br>
+                <strong>Number of Tanks (in series):</strong> ${numTanks}<br>
+                <strong>Single Tank Capacity:</strong> ${parseInt(singleTankCapacity).toLocaleString()} USG<br>
+                <strong>Total System Capacity:</strong> ${parseInt(totalCapacity).toLocaleString()} USG<br>
+                <strong>Estimated Days to Exchange (per tank):</strong> ${daysToExchange} days<br>
                 <hr style="margin:1em 0;">
                 <strong>Grains Loading Calculation:</strong><br>
                 <span style="font-size:0.98em;">${grainsLoadingFormula(tds, co2)} = <strong>${grainsLoading}</strong> grains/USG</span><br>
@@ -251,35 +211,54 @@
                 <span style="font-size:0.98em;color:#0099A8;">Assumptions: TDS ${tds} mg/L, CO₂ ${co2} mg/L, Grains Loading ${grainsLoading} grains/USG</span>
             `;
             // Show TXT button
-            var txtBtn = document.getElementById('downloadTXT');
-            if (txtBtn) {
-                txtBtn.style.display = 'inline-block';
-                txtBtn.onclick = function() {
-                    const txt = buildTxtReport({
-                        date: new Date().toLocaleString(),
-                        conductivity: document.getElementById('conductivity').value,
-                        tds,
-                        co2,
-                        grainsLoading,
-                        flowRange,
-                        hours,
-                        resin: recommended.resin,
-                        tankCapacity: parseInt(tankCapacity).toLocaleString(),
-                        gallonsPerDay,
-                        daysToExchange,
-                        tankLabel: recommended.label
-                    });
-                    const blob = new Blob([txt], {type: 'text/plain'});
-                    const a = document.createElement('a');
-                    a.href = URL.createObjectURL(blob);
-                    a.download = 'SDI_Tank_Sizing_Report.txt';
-                    document.body.appendChild(a);
-                    a.click();
-                    document.body.removeChild(a);
-                };
-            }
+            const txtBtn = document.getElementById('downloadTXT');
+            txtBtn.style.display = 'inline-block';
+            txtBtn.onclick = function() {
+                // Build plain text report
+                let txt = '';
+                txt += 'Eclipse Water Technologies SDI Tank Sizing Report\n';
+                txt += 'Date: ' + new Date().toLocaleString() + '\n\n';
+                txt += 'Inputs:\n';
+                txt += `Feedwater Conductivity: ${document.getElementById('conductivity').value} μS/cm\n`;
+                txt += `Feedwater TDS: ${tds} mg/L\n`;
+                txt += `Feedwater CO2: ${co2} mg/L\n`;
+                txt += `Grains Loading: ${grainsLoading} grains/USG\n`;
+                txt += `Flow Rate: ${flowRange} USGPM\n`;
+                txt += `Hours per Day: ${hours}\n`;
+                txt += `Number of Tanks (in series): ${numTanks}\n\n`;
+                txt += 'Calculation Steps:\n';
+                txt += '1. Grains Loading Formula:\n';
+                txt += `   Grains Loading = (TDS + CO2) / 17.1 = (${tds} + ${co2}) / 17.1 = ${grainsLoading} grains/USG\n`;
+                txt += '2. Single Tank Capacity Formula:\n';
+                txt += `   Single Tank Capacity = (Resin Volume x 12,000) / Grains Loading = (${recommended.resin} x 12,000) / ${grainsLoading} = ${parseInt(singleTankCapacity).toLocaleString()} USG\n`;
+                txt += '3. Days to Exchange (per tank):\n';
+                txt += `   Gallons per Day = Flow Rate x 60 x Hours = ${flowRange} x 60 x ${hours} = ${gallonsPerDay} USG/day\n`;
+                txt += `   Days to Exchange = Single Tank Capacity / Gallons per Day = ${parseInt(singleTankCapacity).toLocaleString()} / ${gallonsPerDay} = ${daysToExchange} days\n\n`;
+                txt += 'Results:\n';
+                txt += `Recommended Tank: ${recommended.label}\n`;
+                txt += `Number of Tanks (in series): ${numTanks}\n`;
+                txt += `Single Tank Capacity: ${parseInt(singleTankCapacity).toLocaleString()} USG\n`;
+                txt += `Total System Capacity: ${parseInt(totalCapacity).toLocaleString()} USG\n`;
+                txt += `Estimated Days to Exchange (per tank): ${daysToExchange} days\n\n`;
+                txt += 'Assumptions:\n';
+                txt += '• TDS (mg/L) = Conductivity (μS/cm) x 0.67\n';
+                txt += '• Standard resin capacity per tank model (12,000 grains/ft³)\n\n';
+                txt += 'Eclipse Water Technologies\n';
+                txt += 'Website: eclipsewatertechnologies.com\n';
+                txt += 'Phone: 647 355 0944\n';
+                txt += 'Email: rlee@eclipsewatertechnologies.com\n';
+                txt += 'To order a tank or discuss your application, contact us or visit our website.\n';
+                // Download as TXT
+                var blob = new Blob([txt], { type: 'text/plain' });
+                var a = document.createElement('a');
+                a.href = URL.createObjectURL(blob);
+                a.download = 'Resin_Tank_Sizing_Report.txt';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            };
         };
-        </script>
-        <?php include 'Cancellation Page/layout_end.php'; ?>
-    </body>
-    </html>
+    </script>
+    <?php include 'Cancellation Page/layout_end.php'; ?>
+</body>
+</html>
