@@ -42,16 +42,21 @@
                     </table>
                     <table style="width:100%;max-width:600px;margin-bottom:1em;border-collapse:separate;border-spacing:0 0.5em;">
                         <tr>
-                            <td style="width:45%;vertical-align:top;font-weight:600;">Select your typical flow rate:</td>
+                            <td style="width:45%;vertical-align:top;font-weight:600;">Select Tank Model:</td>
                             <td style="width:55%;vertical-align:top;">
-                                <select id="flowRange" required style="width:100%;">
-                                    <option value="3">1–5 gpm (small lab, glasswasher, etc.)</option>
-                                    <option value="8">5–10 gpm (medium process, small production)</option>
-                                    <option value="15">10–20 gpm (large process, multiple outlets)</option>
-                                    <option value="30">20–40 gpm (industrial, large system)</option>
-                                    <option value="60">40–80 gpm (very large system)</option>
-                                    <option value="100">80–120 gpm (multiple large systems)</option>
+                                <select id="tankModel" required style="width:100%;">
+                                    <option value="1.0">8x44 (1.0 ft³)</option>
+                                    <option value="3.5">14x47 (3.5 ft³)</option>
+                                    <option value="7.0">21x62 (7.0 ft³)</option>
+                                    <option value="42">Jumbo (42 ft³)</option>
                                 </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align:top;font-weight:600;">Enter your typical flow rate (GPM):</td>
+                            <td style="vertical-align:top;">
+                                <input type="number" id="flowRate" value="5" min="0.1" step="0.1" required style="width:100%;max-width:120px;">
+                                <div style="font-size:0.97em;color:#888;">Enter the average flow in gallons per minute (gpm) your process or equipment uses.</div>
                             </td>
                         </tr>
                         <tr>
@@ -171,39 +176,29 @@
             let co2 = parseFloat(document.getElementById('co2').value);
             let grainsLoading = parseFloat(document.getElementById('grainsLoading') ? document.getElementById('grainsLoading').value : 3.0);
             let numTanks = parseInt(document.getElementById('numTanks').value) || 1;
+            let tankModel = parseFloat(document.getElementById('tankModel').value);
+            let tankLabel = document.getElementById('tankModel').options[document.getElementById('tankModel').selectedIndex].text;
+            let flowRate = parseFloat(document.getElementById('flowRate').value);
+            let hours = parseFloat(document.getElementById('hours').value);
             // If advanced is hidden, recalc grains loading from TDS/CO2
             if (document.getElementById('advancedOptions').style.display === 'none') {
                 grainsLoading = ((tds + co2) / 17.1).toFixed(2);
             }
-            // Tank models and capacities
-            const tanks = [
-                {label: '8x44 (1.0 ft³)', resin: 1.0, capacity: 12500, flow: 3},
-                {label: '14x47 (3.5 ft³)', resin: 3.5, capacity: 35000, flow: 8},
-                {label: '21x62 (7.0 ft³)', resin: 7.0, capacity: 70000, flow: 15},
-                {label: 'Jumbo (42 ft³)', resin: 42, capacity: 420000, flow: 60}
-            ];
-            const flowRange = parseFloat(document.getElementById('flowRange').value);
-            const hours = parseFloat(document.getElementById('hours').value);
-            // Find recommended tank
-            let recommended = tanks[0];
-            for (let i = 0; i < tanks.length; i++) {
-                if (flowRange <= tanks[i].flow) {
-                    recommended = tanks[i];
-                    break;
-                }
-            }
             // In series: only one tank's capacity is used for service interval
-            let singleTankCapacity = ((12000 * recommended.resin) / grainsLoading).toFixed(1);
+            let singleTankCapacity = ((12000 * tankModel) / grainsLoading).toFixed(1);
             let totalCapacity = (singleTankCapacity * numTanks).toFixed(1);
-            const gallonsPerDay = (flowRange * 60 * hours).toFixed(0);
+            const gallonsPerDay = (flowRate * 60 * hours).toFixed(0);
+            // Days to Exchange = Gallons Capacity / Gallons Per Day
             const daysToExchange = (singleTankCapacity / gallonsPerDay).toFixed(1);
             document.getElementById('results').style.display = 'block';
             document.getElementById('results').innerHTML = `
-                <strong>Recommended Tank:</strong> ${recommended.label}<br>
+                <strong>Selected Tank Model:</strong> ${tankLabel}<br>
                 <strong>Number of Tanks (in series):</strong> ${numTanks}<br>
                 <strong>Single Tank Capacity:</strong> ${parseInt(singleTankCapacity).toLocaleString()} USG<br>
                 <strong>Total System Capacity:</strong> ${parseInt(totalCapacity).toLocaleString()} USG<br>
+                <strong>Flow Rate Used for Calculation:</strong> ${flowRate} GPM<br>
                 <strong>Estimated Days to Exchange (per tank):</strong> ${daysToExchange} days<br>
+                <span style="font-size:0.97em;color:#0099A8;">Days to Exchange = Gallons Capacity / Gallons Per Day</span><br>
                 <hr style="margin:1em 0;">
                 <strong>Grains Loading Calculation:</strong><br>
                 <span style="font-size:0.98em;">${grainsLoadingFormula(tds, co2)} = <strong>${grainsLoading}</strong> grains/USG</span><br>
@@ -223,22 +218,24 @@
                 txt += `Feedwater TDS: ${tds} mg/L\n`;
                 txt += `Feedwater CO2: ${co2} mg/L\n`;
                 txt += `Grains Loading: ${grainsLoading} grains/USG\n`;
-                txt += `Flow Rate: ${flowRange} USGPM\n`;
+                txt += `Tank Model: ${tankLabel}\n`;
+                txt += `Flow Rate: ${flowRate} USGPM\n`;
                 txt += `Hours per Day: ${hours}\n`;
                 txt += `Number of Tanks (in series): ${numTanks}\n\n`;
                 txt += 'Calculation Steps:\n';
                 txt += '1. Grains Loading Formula:\n';
                 txt += `   Grains Loading = (TDS + CO2) / 17.1 = (${tds} + ${co2}) / 17.1 = ${grainsLoading} grains/USG\n`;
                 txt += '2. Single Tank Capacity Formula:\n';
-                txt += `   Single Tank Capacity = (Resin Volume x 12,000) / Grains Loading = (${recommended.resin} x 12,000) / ${grainsLoading} = ${parseInt(singleTankCapacity).toLocaleString()} USG\n`;
+                txt += `   Single Tank Capacity = (Resin Volume x 12,000) / Grains Loading = (${tankModel} x 12,000) / ${grainsLoading} = ${parseInt(singleTankCapacity).toLocaleString()} USG\n`;
                 txt += '3. Days to Exchange (per tank):\n';
-                txt += `   Gallons per Day = Flow Rate x 60 x Hours = ${flowRange} x 60 x ${hours} = ${gallonsPerDay} USG/day\n`;
-                txt += `   Days to Exchange = Single Tank Capacity / Gallons per Day = ${parseInt(singleTankCapacity).toLocaleString()} / ${gallonsPerDay} = ${daysToExchange} days\n\n`;
+                txt += `   Gallons per Day = Flow Rate x 60 x Hours = ${flowRate} x 60 x ${hours} = ${gallonsPerDay} USG/day\n`;
+                txt += `   Days to Exchange = Gallons Capacity / Gallons per Day = ${parseInt(singleTankCapacity).toLocaleString()} / ${gallonsPerDay} = ${daysToExchange} days\n\n`;
                 txt += 'Results:\n';
-                txt += `Recommended Tank: ${recommended.label}\n`;
+                txt += `Selected Tank Model: ${tankLabel}\n`;
                 txt += `Number of Tanks (in series): ${numTanks}\n`;
                 txt += `Single Tank Capacity: ${parseInt(singleTankCapacity).toLocaleString()} USG\n`;
                 txt += `Total System Capacity: ${parseInt(totalCapacity).toLocaleString()} USG\n`;
+                txt += `Flow Rate Used for Calculation: ${flowRate} GPM\n`;
                 txt += `Estimated Days to Exchange (per tank): ${daysToExchange} days\n\n`;
                 txt += 'Assumptions:\n';
                 txt += '• TDS (mg/L) = Conductivity (μS/cm) x 0.67\n';
