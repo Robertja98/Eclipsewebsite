@@ -130,7 +130,6 @@
                             <li>TDS: <span id="assumeTDS">50</span> mg/L</li>
                             <li>CO₂: <span id="assumeCO2">2</span> mg/L</li>
                             <li>Grains Loading: <span id="assumeGrains">3.0</span> grains/USG</li>
-                            <li>Standard resin capacity per tank model (12,000 grains/ft³)</li>
                             <li>Resin capacity: <span id="assumeResin">10,000</span> grains/ft³</li>
                         </ul>
                     </div>
