@@ -77,6 +77,17 @@
                     <div style="font-size:0.95em;color:#888;margin-top:0.5em;">*USG capacity is an estimate and will be refined by your water quality in later steps.</div>
                 </div>
                 <div class="calc-section">
+                    <h2>Step 1b: Resin Type</h2>
+                    <label for="resinType"><strong>Resin Type/Condition:</strong></label>
+                    <select id="resinType" style="width:100%;max-width:320px;margin-bottom:0.5em;">
+                        <option value="10000">New Mixed Bed (10,000 grains/ft³)</option>
+                        <option value="9000">Regenerated Mixed Bed (9,000 grains/ft³)</option>
+                        <option value="custom">Custom (enter below)</option>
+                    </select>
+                    <input type="number" id="customGrains" value="10000" min="1000" max="20000" step="100" style="width:100%;max-width:180px;display:none;margin-top:0.5em;" placeholder="Custom grains/ft³">
+                    <div style="font-size:0.97em;color:#888;">Industry field estimate: 10,000 grains/ft³ (new), 9,000 grains/ft³ (regenerated).</div>
+                </div>
+                <div class="calc-section">
                     <h2>Step 2: Water Quality (Optional)</h2>
                     <label for="conductivity">Feedwater Conductivity (μS/cm)</label>
                     <span class="info">If you have a water quality report, enter the conductivity. Otherwise, leave the default.</span>
@@ -120,6 +131,7 @@
                             <li>CO₂: <span id="assumeCO2">2</span> mg/L</li>
                             <li>Grains Loading: <span id="assumeGrains">3.0</span> grains/USG</li>
                             <li>Standard resin capacity per tank model (12,000 grains/ft³)</li>
+                            <li>Resin capacity: <span id="assumeResin">10,000</span> grains/ft³</li>
                         </ul>
                     </div>
                 </div>
@@ -157,11 +169,33 @@
             document.getElementById('assumeTDS').textContent = document.getElementById('tds').value;
             document.getElementById('assumeCO2').textContent = document.getElementById('co2').value;
             document.getElementById('assumeGrains').textContent = document.getElementById('grainsLoading').value;
+            // Update resin capacity
+            let resinType = document.getElementById('resinType').value;
+            let resinGrains = 10000;
+            if (resinType === 'custom') {
+                resinGrains = parseFloat(document.getElementById('customGrains').value) || 10000;
+            } else {
+                resinGrains = parseFloat(resinType);
+            }
+            document.getElementById('assumeResin').textContent = resinGrains;
         }
-        ['tds','co2','grainsLoading'].forEach(id => {
+        ['tds','co2','grainsLoading','resinType','customGrains'].forEach(id => {
             document.addEventListener('input', function(e) {
                 if (e.target && e.target.id === id) updateAssumptions();
             });
+            document.addEventListener('change', function(e) {
+                if (e.target && e.target.id === id) updateAssumptions();
+            });
+        });
+
+        // Show/hide custom grains input
+        document.getElementById('resinType').addEventListener('change', function() {
+            if (this.value === 'custom') {
+                document.getElementById('customGrains').style.display = 'inline-block';
+            } else {
+                document.getElementById('customGrains').style.display = 'none';
+            }
+            updateAssumptions();
         });
 
         // Show grains loading formula and calculation
@@ -180,16 +214,24 @@
             let tankLabel = document.getElementById('tankModel').options[document.getElementById('tankModel').selectedIndex].text;
             let flowRate = parseFloat(document.getElementById('flowRate').value);
             let hours = parseFloat(document.getElementById('hours').value);
+            // Resin grains/ft³ selection (fixes ReferenceError)
+            let resinGrains = 10000;
+            const resinType = document.getElementById('resinType').value;
+            if (resinType === 'custom') {
+                resinGrains = parseFloat(document.getElementById('customGrains').value) || 10000;
+            } else {
+                resinGrains = parseFloat(resinType);
+            }
             // If advanced is hidden, recalc grains loading from TDS/CO2
             if (document.getElementById('advancedOptions').style.display === 'none') {
                 grainsLoading = ((tds + co2) / 17.1).toFixed(2);
             }
             // In series: only one tank's capacity is used for service interval
-            let singleTankCapacity = ((12000 * tankModel) / grainsLoading).toFixed(1);
+            let singleTankCapacity = ((resinGrains * tankModel) / grainsLoading).toFixed(1);
             let totalCapacity = (singleTankCapacity * numTanks).toFixed(1);
             const gallonsPerDay = (flowRate * 60 * hours).toFixed(0);
             // Days to Exchange = Gallons Capacity / Gallons Per Day
-            const daysToExchange = (singleTankCapacity / gallonsPerDay).toFixed(1);
+            const daysToExchange = ((singleTankCapacity / gallonsPerDay) * numTanks).toFixed(1);
             document.getElementById('results').style.display = 'block';
             document.getElementById('results').innerHTML = `
                 <strong>Selected Tank Model:</strong> ${tankLabel}<br>
@@ -226,7 +268,7 @@
                 txt += '1. Grains Loading Formula:\n';
                 txt += `   Grains Loading = (TDS + CO2) / 17.1 = (${tds} + ${co2}) / 17.1 = ${grainsLoading} grains/USG\n`;
                 txt += '2. Single Tank Capacity Formula:\n';
-                txt += `   Single Tank Capacity = (Resin Volume x 12,000) / Grains Loading = (${tankModel} x 12,000) / ${grainsLoading} = ${parseInt(singleTankCapacity).toLocaleString()} USG\n`;
+                txt += `   Single Tank Capacity = (Resin Volume x ${resinGrains}) / Grains Loading = (${tankModel} x ${resinGrains}) / ${grainsLoading} = ${parseInt(singleTankCapacity).toLocaleString()} USG\n`;
                 txt += '3. Days to Exchange (per tank):\n';
                 txt += `   Gallons per Day = Flow Rate x 60 x Hours = ${flowRate} x 60 x ${hours} = ${gallonsPerDay} USG/day\n`;
                 txt += `   Days to Exchange = Gallons Capacity / Gallons per Day = ${parseInt(singleTankCapacity).toLocaleString()} / ${gallonsPerDay} = ${daysToExchange} days\n\n`;
@@ -239,7 +281,13 @@
                 txt += `Estimated Days to Exchange (per tank): ${daysToExchange} days\n\n`;
                 txt += 'Assumptions:\n';
                 txt += '• TDS (mg/L) = Conductivity (μS/cm) x 0.67\n';
-                txt += '• Standard resin capacity per tank model (12,000 grains/ft³)\n\n';
+                if (resinGrains === 10000) {
+                    txt += '• Resin capacity (new mixed bed): 10,000 grains/ft³\n';
+                } else if (resinGrains === 9000) {
+                    txt += '• Resin capacity (regenerated mixed bed): 9,000 grains/ft³\n';
+                } else {
+                    txt += `• Resin capacity (custom): ${resinGrains.toLocaleString()} grains/ft³\n`;
+                }
                 txt += 'Eclipse Water Technologies\n';
                 txt += 'Website: eclipsewatertechnologies.com\n';
                 txt += 'Phone: 647 355 0944\n';

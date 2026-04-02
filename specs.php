@@ -137,6 +137,7 @@
   <main>
     <section class="container" style="margin-top:2rem;">
       <h1 style="font-family:'Montserrat',sans-serif;color:#003366;font-size:2rem;margin-bottom:1.5rem;">Technical Specifications</h1>
+      <a href="resin-tank-calculator.php" class="btn" style="margin-bottom:2rem;display:inline-block;">Resin Tank Sizing Calculator</a>
       <div class="accordion" id="accordion-tank-models">
         <div class="accordion-header">Tank Models & Capacities <span class="accordion-arrow">▶</span></div>
         <div class="accordion-content">

@@ -58,9 +58,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container" style="margin-top:2.5em;">
-      <a href="sdi-tank-sizing.php" class="btn" style="background:#0099A8;color:#fff;font-weight:600;font-size:1.15em;padding:1em 2.2em;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.07);display:inline-block;margin-bottom:2em;">SDI Tank Sizing Calculator</a>
-    </div>
   <?php include 'navbar.php'; ?>
   <section class="container" id="dashboard-access" style="display: none; margin-top: 2rem;">
     <a href="dashboard.html" class="btn">Go to Dashboard</a>
