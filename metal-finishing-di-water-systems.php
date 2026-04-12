@@ -53,6 +53,7 @@
       <h3>Related services</h3>
       <p>Metal finishing clients often pair DI support with carbon filtration, softening, or broader industrial water treatment review.</p>
       <a class="link" href="industrial-water-treatment-toronto.php">See industrial water treatment support →</a>
+      <a class="link" href="local-manufacturing-water-service-cost-savings-ontario.php">See how local service can reduce manufacturing downtime risk and cost →</a>
     </article>
   </section>
 

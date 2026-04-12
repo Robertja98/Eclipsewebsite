@@ -120,10 +120,30 @@
       <p>Find solutions tailored to rinse water, sterilization support, plating, and production uptime.</p>
       <ul class="bullets">
         <li><a class="link" href="hospital-di-water-systems-ontario.php">Hospital DI Water Systems Ontario</a></li>
+        <li><a class="link" href="local-hospital-water-service-cost-savings-ontario.php">Local Hospital Water Service Cost Savings Ontario</a></li>
         <li><a class="link" href="metal-finishing-di-water-systems.php">Metal Finishing DI Water Systems</a></li>
+        <li><a class="link" href="local-manufacturing-water-service-cost-savings-ontario.php">Local Manufacturing Water Service Cost Savings Ontario</a></li>
         <li><a class="link" href="di-water-service-toronto.php">DI Water Service Toronto</a></li>
         <li><a class="link" href="industrial-water-treatment-toronto.php">Industrial Water Treatment Toronto</a></li>
       </ul>
+    </article>
+  </section>
+
+  <section class="container cards">
+    <article class="card">
+      <h3>Hospital Cost and Risk Comparison</h3>
+      <p>See how local Ontario water service can reduce response risk, logistics exposure, and contingency cost for healthcare environments.</p>
+      <a class="link" href="local-hospital-water-service-cost-savings-ontario.php">Review the hospital comparison page →</a>
+    </article>
+    <article class="card">
+      <h3>Manufacturing Cost and Downtime Comparison</h3>
+      <p>See how local Ontario service can reduce cross-border friction, support uptime, and lower hidden operating cost for production sites.</p>
+      <a class="link" href="local-manufacturing-water-service-cost-savings-ontario.php">Review the manufacturing comparison page →</a>
+    </article>
+    <article class="card">
+      <h3>Hidden Costs in Water Service Contracts</h3>
+      <p>Your water service contract likely includes hidden fees that aren't obvious until invoicing — cross-border freight, customs charges, emergency premiums, and currency exposure add up fast.</p>
+      <a class="link" href="hidden-contract-costs-water-service.php">Uncover hidden contract costs →</a>
     </article>
   </section>
 

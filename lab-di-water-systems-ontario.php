@@ -101,6 +101,7 @@
       <h3>Questions labs ask first</h3>
       <p>Most lab projects start with feed water quality, target resistivity, daily volume, and how much support the site wants to manage internally.</p>
       <a class="link" href="contact.php">Discuss your lab application →</a>
+      <a class="link" href="local-laboratory-water-service-cost-savings-ontario.php">See how local service can reduce lab cost and delay risk →</a>
     </article>
   </section>
 

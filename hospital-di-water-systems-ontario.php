@@ -53,6 +53,7 @@
       <h3>How we support facilities</h3>
       <p>We review application needs, target water quality, access constraints, and service frequency so the system is practical for the site, not just correct on paper.</p>
       <a class="link" href="services.php">View related water treatment services →</a>
+      <a class="link" href="local-hospital-water-service-cost-savings-ontario.php">See how local service can reduce hospital cost and response risk →</a>
     </article>
   </section>
 

@@ -77,6 +77,24 @@
     </div>
   </section>
 
+  <section class="container cards">
+    <article class="card">
+      <h3>Compare Local Service Models</h3>
+      <p>If you are reviewing a cross-border service model, we can help identify where local support may reduce freight exposure, response risk, and hidden operating cost.</p>
+      <ul class="bullets">
+        <li><a class="link" href="local-di-service-cost-savings-ontario.php">General local DI service cost comparison</a></li>
+        <li><a class="link" href="local-laboratory-water-service-cost-savings-ontario.php">Laboratory water service cost comparison</a></li>
+        <li><a class="link" href="local-hospital-water-service-cost-savings-ontario.php">Hospital water service cost comparison</a></li>
+        <li><a class="link" href="local-manufacturing-water-service-cost-savings-ontario.php">Manufacturing water service cost comparison</a></li>
+      </ul>
+    </article>
+    <article class="card">
+      <h3>Hidden Costs in Your Water Service Contract</h3>
+      <p>Your contract likely includes fees you haven't discovered yet — cross-border freight surcharges, customs administration, emergency premiums, currency exposure, and per-delivery charges that add up fast.</p>
+      <a class="link" href="hidden-contract-costs-water-service.php">Learn what you're really paying for water service →</a>
+    </article>
+  </section>
+
   <footer class="site-footer">
     <div class="container footer-grid">
       <div><strong>Eclipse Water Technologies</strong></div>

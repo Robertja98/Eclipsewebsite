@@ -44,6 +44,39 @@
       <h3>Ultrafiltration (UF) Systems</h3>
       <p>Advanced UF technology for removing suspended solids, bacteria, and viruses. Delivers crystal-clear water for process, reuse, or as RO pretreatment. Compact, robust, and easy to operate.</p>
     </article>
+    <article class="solution-card">
+      <img src="https://eclipsewatertechnologies.com/Eclipselogo2026.png" alt="Local DI Service Cost Savings Ontario" style="max-width:90px;height:auto;display:block;margin:0 auto 1em auto;">
+      <h3>Local Service Cost Comparison</h3>
+      <p>See how a local Ontario DI service model can reduce cross-border freight exposure, improve response time, and lower operational risk for high purity and process water users.</p>
+      <a class="link" href="local-di-service-cost-savings-ontario.php">Review the local cost comparison →</a>
+    </article>
+  </section>
+  <section class="container cards">
+    <article class="card">
+      <h3>General Comparison Page</h3>
+      <p>Start here for a broad overview of how local Ontario DI service can reduce cross-border cost, delay exposure, and service complexity.</p>
+      <a class="link" href="local-di-service-cost-savings-ontario.php">View the general comparison →</a>
+    </article>
+    <article class="card">
+      <h3>Laboratory Comparison Page</h3>
+      <p>Built for labs and research facilities that depend on high purity water, predictable response, and minimal disruption to testing workflows.</p>
+      <a class="link" href="local-laboratory-water-service-cost-savings-ontario.php">View the laboratory comparison →</a>
+    </article>
+    <article class="card">
+      <h3>Hospital Comparison Page</h3>
+      <p>Focused on healthcare applications where continuity, scheduling reliability, and response time matter as much as direct service cost.</p>
+      <a class="link" href="local-hospital-water-service-cost-savings-ontario.php">View the hospital comparison →</a>
+    </article>
+    <article class="card">
+      <h3>Manufacturing Comparison Page</h3>
+      <p>Focused on downtime risk, emergency service exposure, and production-support considerations for Ontario manufacturing sites.</p>
+      <a class="link" href="local-manufacturing-water-service-cost-savings-ontario.php">View the manufacturing comparison →</a>
+    </article>
+    <article class="card">
+      <h3>Understanding Your Contract Costs</h3>
+      <p>Find out what hidden fees and charges are buried in typical water service contracts — cross-border freight, customs, emergency premiums, and more.</p>
+      <a class="link" href="hidden-contract-costs-water-service.php">Uncover the real cost of your water service →</a>
+    </article>
   </section>
   <section class="container" style="text-align:center; margin-top:2rem;">
     <a href="contact.php" class="btn">Request a Consultation</a>

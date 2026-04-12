@@ -123,6 +123,7 @@
         <li><a class="link" href="industrial-water-treatment-toronto.php">Industrial Water Treatment Toronto</a></li>
         <li><a class="link" href="di-tank-exchange-service.php">DI Tank Exchange Service</a></li>
         <li><a class="link" href="industrial-water-softener-service.php">Industrial Water Softener Service</a></li>
+        <li><a class="link" href="local-di-service-cost-savings-ontario.php">Local DI Service Cost Savings Ontario</a></li>
       </ul>
     </article>
 
@@ -145,6 +146,12 @@
         <li><a class="link" href="reverse-osmosis-service-canada.php">Reverse Osmosis Service Canada</a></li>
       </ul>
       <a class="link" href="contact.php">Need a recommendation? Talk to us →</a>
+    </article>
+
+    <article class="card">
+      <h3>Understanding Your Water Service Contract Costs</h3>
+      <p>Most water service contracts hide significant fees in their terms — cross-border freight, customs charges, emergency premiums, and currency exposure. Learn what's costing you and why local service often saves money.</p>
+      <a class="link" href="hidden-contract-costs-water-service.php">Uncover hidden contract costs →</a>
     </article>
   </section>
 
