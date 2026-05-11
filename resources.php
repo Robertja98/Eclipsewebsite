@@ -35,6 +35,11 @@ include 'header.php';
         <a class="link" href="how-sdi-works.php">Read the guide →</a>
       </article>
       <article class="card">
+        <h3><a class="link" href="what-is-mixed-bed-deionization.php">What is Mixed-Bed Deionization?</a></h3>
+        <p>How cation and anion resin combine in a single tank to produce 1&ndash;18 MegOhm water &mdash; and when to use mixed-bed vs. two-bed systems.</p>
+        <a class="link" href="what-is-mixed-bed-deionization.php">Read the explainer →</a>
+      </article>
+      <article class="card">
         <h3><a class="link" href="sdi-vs-ro-canada.php">SDI vs RO — Which is Right for You?</a></h3>
         <p>Comparing service deionization and reverse osmosis for Canadian facilities — when to use each, when to combine them, and how the costs compare.</p>
         <a class="link" href="sdi-vs-ro-canada.php">Compare the technologies →</a>
@@ -100,6 +105,16 @@ include 'header.php';
         <h3><a class="link" href="cnc-machine-shop-di-water-ontario.php">DI Water for CNC &amp; Machine Shops Ontario</a></h3>
         <p>Prevent scale in coolant lines, meet EDM resistivity specs, and improve part washdown quality with a local DI service program.</p>
         <a class="link" href="cnc-machine-shop-di-water-ontario.php">CNC water guide →</a>
+      </article>
+      <article class="card">
+        <h3><a class="link" href="food-beverage-di-water-ontario.php">DI Water for Food &amp; Beverage Processing Ontario</a></h3>
+        <p>Prevent boiler scale, protect CIP systems, and meet sanitation rinse water requirements in food and beverage production facilities.</p>
+        <a class="link" href="food-beverage-di-water-ontario.php">Food &amp; beverage guide →</a>
+      </article>
+      <article class="card">
+        <h3><a class="link" href="pharmaceutical-di-water-ontario.php">DI Water for Pharmaceutical &amp; Biotech Ontario</a></h3>
+        <p>USP Purified Water-grade DI for compounding, biotech research, and analytical labs. Local service with no tariffs.</p>
+        <a class="link" href="pharmaceutical-di-water-ontario.php">Pharma &amp; biotech guide →</a>
       </article>
     </div>
   </section>
