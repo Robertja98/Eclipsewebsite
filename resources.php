@@ -1,11 +1,26 @@
 <?php
 $pageTitle = 'SDI & Water Treatment Resources | Eclipse Water Technologies';
 $pageDescription = 'Free resources on service deionization, DI water quality, system sizing, troubleshooting, and water treatment selection for Canadian industrial and laboratory facilities.';
+$pageExtraHead = <<<'EXTRAHEAD'
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://eclipsewatertechnologies.com/resources.php" />
+  <meta property="og:title" content="SDI & Water Treatment Resources | Eclipse Water Technologies" />
+  <meta property="og:description" content="Free guides on service deionization, DI water quality, system sizing, and troubleshooting for Canadian industrial and laboratory facilities." />
+  <meta property="og:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
+  <meta property="og:url" content="https://eclipsewatertechnologies.com/resources.php" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_CA" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SDI & Water Treatment Resources | Eclipse Water Technologies" />
+  <meta name="twitter:description" content="Free guides on service deionization, tank sizing, troubleshooting, and water treatment for Canadian facilities." />
+  <meta name="twitter:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
+  <meta name="twitter:site" content="@EclipseWaterTech" />
+EXTRAHEAD;
 include 'header.php';
 ?>
 
   <section class="hero hero-sub">
-    <div class="container">
+    <div class="section-inner">
       <h1>Water Treatment Resources</h1>
       <p>Free guides, explainers, and tools to help Canadian facilities understand, optimize, and troubleshoot service deionization and water treatment systems.</p>
     </div>
@@ -81,6 +96,11 @@ include 'header.php';
         <p>DI water for renal dialysis, sterilization, pharmacy compounding, and other healthcare applications.</p>
         <a class="link" href="hospital-di-water-systems-ontario.php">Healthcare water guide →</a>
       </article>
+      <article class="card">
+        <h3><a class="link" href="cnc-machine-shop-di-water-ontario.php">DI Water for CNC &amp; Machine Shops Ontario</a></h3>
+        <p>Prevent scale in coolant lines, meet EDM resistivity specs, and improve part washdown quality with a local DI service program.</p>
+        <a class="link" href="cnc-machine-shop-di-water-ontario.php">CNC water guide →</a>
+      </article>
     </div>
   </section>
 
@@ -102,11 +122,16 @@ include 'header.php';
         <p>Hardness control for boilers, wash systems, and pretreatment trains — reduces DI resin exhaustion rate when used upstream.</p>
         <a class="link" href="industrial-water-softener-service.php">Softener service →</a>
       </article>
+      <article class="card">
+        <h3><a class="link" href="di-water-service-pricing.php">DI Water Service Pricing Guide</a></h3>
+        <p>What drives SDI tank exchange cost in Ontario — tank size, feed TDS, service frequency — and how to calculate your cost per litre.</p>
+        <a class="link" href="di-water-service-pricing.php">See pricing guide →</a>
+      </article>
     </div>
   </section>
 
   <section class="strip cta-strip">
-    <div class="container">
+    <div class="section-inner" style="text-align:center;">
       <h2>Have a question not covered here?</h2>
       <p>Our team answers technical questions about DI water, ion exchange, RO, and water treatment system design for Canadian facilities. No sales pressure — just straightforward answers.</p>
       <a href="contact.php" class="btn">Ask a Question</a>

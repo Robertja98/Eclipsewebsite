@@ -1,6 +1,42 @@
 ﻿<?php
 $pageTitle = 'Water Treatment Services | Canadian DI Systems, Softeners & Filtration';
 $pageDescription = "Explore Eclipse Water Technologies' Canadian water treatment services: DI systems, water softeners, and activated carbon filtration. No tariffs, stable pricing.";
+$pageExtraHead = <<<'EXTRAHEAD'
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://eclipsewatertechnologies.com/services.php" />
+  <meta property="og:title" content="Water Treatment Services | Eclipse Water Technologies" />
+  <meta property="og:description" content="DI systems, water softeners, RO, and activated carbon filtration for Canadian industrial and laboratory facilities. No tariffs, stable pricing." />
+  <meta property="og:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
+  <meta property="og:url" content="https://eclipsewatertechnologies.com/services.php" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_CA" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Water Treatment Services | Eclipse Water Technologies" />
+  <meta name="twitter:description" content="DI systems, softeners, RO, and filtration for Canadian facilities. No tariffs, transparent pricing." />
+  <meta name="twitter:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
+  <meta name="twitter:site" content="@EclipseWaterTech" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Water Treatment Services",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Eclipse Water Technologies",
+      "url": "https://eclipsewatertechnologies.com",
+      "telephone": "+1-647-355-0944",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toronto",
+        "addressRegion": "ON",
+        "addressCountry": "CA"
+      }
+    },
+    "areaServed": { "@type": "AdministrativeArea", "name": "Ontario, Canada" },
+    "description": "DI tank exchange service, water softeners, reverse osmosis, and activated carbon filtration for industrial and laboratory facilities across Ontario."
+  }
+  </script>
+EXTRAHEAD;
 include 'header.php';
 ?>
 
