@@ -303,6 +303,3 @@
             };
         };
     </script>
-    <?php include 'Cancellation Page/layout_end.php'; ?>
-</body>
-</html>

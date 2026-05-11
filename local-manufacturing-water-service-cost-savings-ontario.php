@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en-CA">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Local Manufacturing Water Service Ontario | Reduce Downtime Risk and Cost | Eclipse Water Technologies</title>
-  <meta name="description" content="Learn how local manufacturing DI and process water service in Ontario can reduce downtime risk, improve response time, and lower cross-border service cost exposure." />
+﻿<?php
+$pageTitle = 'Local Manufacturing Water Service Ontario | Reduce Downtime Risk and Cost | Eclipse Water Technologies';
+$pageDescription = 'Learn how local manufacturing DI and process water service in Ontario can reduce downtime risk, improve response time, and lower cross-border service cost exposure.';
+$pageExtraHead = <<<'EXTRAHEAD'
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <meta name="keywords" content="manufacturing water service Ontario, local DI service manufacturing Ontario, process water support Ontario, manufacturing water service cost savings, local industrial water service Ontario" />
   <meta name="author" content="Eclipse Water Technologies" />
   <link rel="canonical" href="https://eclipsewatertechnologies.com/local-manufacturing-water-service-cost-savings-ontario.php" />
-  <link rel="icon" href="https://eclipsewatertechnologies.com/Eclipselogo2026.png" type="image/png" />
   <meta property="og:title" content="Local Manufacturing Water Service Ontario | Reduce Downtime Risk and Cost" />
   <meta property="og:description" content="A practical look at how local Ontario manufacturing water service can reduce cross-border cost exposure and improve response reliability." />
   <meta property="og:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
@@ -52,13 +49,10 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-  <?php include 'navbar.php'; ?>
-
-  <section class="hero hero-sub">
+EXTRAHEAD;
+include 'header.php';
+?>
+<section class="hero hero-sub">
     <div class="container">
       <h1>Local Manufacturing Water Service Can Reduce Downtime Risk and Cost</h1>
       <p>For Ontario manufacturers, local DI and process water support can reduce cross-border service exposure while improving response speed and schedule reliability.</p>
@@ -120,17 +114,4 @@
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div><strong>Eclipse Water Technologies</strong></div>
-      <div style="display: flex; gap: 1.2rem; align-items: center;">
-        <a href="contact.php" class="btn btn-small">Talk to us</a>
-        <a href="https://www.linkedin.com/company/eclipse-water-technologies" target="_blank" aria-label="LinkedIn" style="margin-left:0.5rem;"><img src="linkedin-icon.svg" alt="LinkedIn" style="height:24px;width:24px;vertical-align:middle;"></a>
-        <a href="https://www.instagram.com/eclipsewatertech" target="_blank" aria-label="Instagram"><img src="instagram-icon.svg" alt="Instagram" style="height:24px;width:24px;vertical-align:middle;"></a>
-        <a href="https://www.facebook.com/eclipsewatertech" target="_blank" aria-label="Facebook"><img src="facebook-icon.svg" alt="Facebook" style="height:24px;width:24px;vertical-align:middle;"></a>
-      </div>
-      <div><p>&copy; 2026 Eclipse Water Technologies</p></div>
-    </div>
-  </footer>
-</body>
-</html>
+<?php include 'footer.php'; ?>

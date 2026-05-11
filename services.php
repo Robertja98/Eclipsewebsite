@@ -1,59 +1,11 @@
-<!DOCTYPE html>
-<html lang="en-CA">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Water Treatment Services | Canadian DI Systems, Softeners & Filtration</title>
-  <meta name="description" content="Explore Eclipse Water Technologies' Canadian water treatment services: DI systems, water softeners, and activated carbon filtration. No tariffs, stable pricing." />
-  <meta name="keywords" content="Canadian water treatment services, DI systems Canada, water softeners, activated carbon filtration, Eclipse Water Technologies" />
-  <meta name="author" content="Eclipse Water Technologies" />
-  <link rel="canonical" href="https://eclipsewatertechnologies.com/services.php" />
-  <link rel="icon" href="https://eclipsewatertechnologies.com/Eclipselogo2026.png" type="image/png" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Canadian Water Treatment Services | Eclipse Water Technologies" />
-  <meta property="og:description" content="Proudly Canadian DI systems, softeners, and filtration. No tariffs, stable pricing, expert service." />
-  <meta property="og:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
-  <meta property="og:url" content="https://eclipsewatertechnologies.com/services.php" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="en_CA" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Canadian Water Treatment Services | Eclipse Water Technologies" />
-  <meta name="twitter:description" content="DI systems, softeners, and filtration. Proudly Canadian. No tariffs." />
-  <meta name="twitter:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
-  <meta name="twitter:site" content="@EclipseWaterTech" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": ["Service", "ProfessionalService"],
-    "name": "Eclipse Water Technologies Water Treatment Services",
-    "serviceType": "Industrial and commercial water treatment services",
-    "provider": {
-      "@type": "Organization",
-      "name": "Eclipse Water Technologies",
-      "url": "https://eclipsewatertechnologies.com/",
-      "telephone": "+1-647-355-0944"
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "Canada"
-    },
-    "url": "https://eclipsewatertechnologies.com/services.php",
-    "description": "Canadian water treatment services including DI systems, softeners, filtration, RO support, and technical service programs."
-  }
-  </script>
-
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-  <?php include 'navbar.php'; ?>
+﻿<?php
+$pageTitle = 'Water Treatment Services | Canadian DI Systems, Softeners & Filtration';
+$pageDescription = "Explore Eclipse Water Technologies' Canadian water treatment services: DI systems, water softeners, and activated carbon filtration. No tariffs, stable pricing.";
+include 'header.php';
+?>
 
   <section class="hero hero-sub">
-    <div class="container">
+    <div class="section-inner">
       <h1>Water Treatment Services</h1>
       <p>Proudly Canadian. No tariffs. Stable pricing. Expert service across DI systems, softeners, filtration, and more.</p>
       <a href="contact.php" class="btn">Request a Quote</a>
@@ -163,17 +115,4 @@
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div><strong>Eclipse Water Technologies</strong></div>
-      <div style="display: flex; gap: 1.2rem; align-items: center;">
-        <a href="contact.php" class="btn btn-small">Talk to us</a>
-        <a href="https://www.linkedin.com/company/eclipse-water-technologies" target="_blank" aria-label="LinkedIn" style="margin-left:0.5rem;"><img src="linkedin-icon.svg" alt="LinkedIn" style="height:24px;width:24px;vertical-align:middle;"></a>
-        <a href="https://www.instagram.com/eclipsewatertech" target="_blank" aria-label="Instagram"><img src="instagram-icon.svg" alt="Instagram" style="height:24px;width:24px;vertical-align:middle;"></a>
-        <a href="https://www.facebook.com/eclipsewatertech" target="_blank" aria-label="Facebook"><img src="facebook-icon.svg" alt="Facebook" style="height:24px;width:24px;vertical-align:middle;"></a>
-      </div>
-      <div><p>&copy; 2026 Eclipse Water Technologies</p></div>
-    </div>
-  </footer>
-</body>
-</html>
+<?php include 'footer.php'; ?>

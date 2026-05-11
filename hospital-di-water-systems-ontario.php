@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en-CA">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hospital DI Water Systems Ontario | Eclipse Water Technologies</title>
-  <meta name="description" content="Hospital DI water systems in Ontario for sterilization support, lab prep, and equipment rinse. Service-backed water quality support from Eclipse Water Technologies." />
+﻿<?php
+$pageTitle = 'Hospital DI Water Systems Ontario | Eclipse Water Technologies';
+$pageDescription = 'Hospital DI water systems in Ontario for sterilization support, lab prep, and equipment rinse. Service-backed water quality support from Eclipse Water Technologies.';
+$pageExtraHead = <<<'EXTRAHEAD'
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <meta name="keywords" content="hospital DI water systems Ontario, hospital deionized water Ontario, sterilization rinse water Ontario" />
   <meta name="author" content="Eclipse Water Technologies" />
   <link rel="canonical" href="https://eclipsewatertechnologies.com/hospital-di-water-systems-ontario.php" />
-  <link rel="icon" href="https://eclipsewatertechnologies.com/Eclipselogo2026.png" type="image/png" />
   <meta property="og:title" content="Hospital DI Water Systems Ontario | Eclipse Water Technologies" />
   <meta property="og:description" content="Ontario hospital DI water systems for sterilization support, lab prep, and rinse water reliability." />
   <meta property="og:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
@@ -20,13 +17,10 @@
   <meta name="twitter:description" content="Ontario hospital DI water systems for sterilization support, lab prep, and rinse water reliability." />
   <meta name="twitter:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
   <meta name="twitter:site" content="@EclipseWaterTech" />
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-  <?php include 'navbar.php'; ?>
-
-  <section class="hero hero-sub">
+EXTRAHEAD;
+include 'header.php';
+?>
+<section class="hero hero-sub">
     <div class="container">
       <h1>Hospital DI Water Systems Ontario</h1>
       <p>Service-supported DI water solutions for hospitals and healthcare facilities across Ontario that need reliable rinse water and predictable support.</p>
@@ -65,17 +59,4 @@
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div><strong>Eclipse Water Technologies</strong></div>
-      <div style="display: flex; gap: 1.2rem; align-items: center;">
-        <a href="contact.php" class="btn btn-small">Talk to us</a>
-        <a href="https://www.linkedin.com/company/eclipse-water-technologies" target="_blank" aria-label="LinkedIn" style="margin-left:0.5rem;"><img src="linkedin-icon.svg" alt="LinkedIn" style="height:24px;width:24px;vertical-align:middle;"></a>
-        <a href="https://www.instagram.com/eclipsewatertech" target="_blank" aria-label="Instagram"><img src="instagram-icon.svg" alt="Instagram" style="height:24px;width:24px;vertical-align:middle;"></a>
-        <a href="https://www.facebook.com/eclipsewatertech" target="_blank" aria-label="Facebook"><img src="facebook-icon.svg" alt="Facebook" style="height:24px;width:24px;vertical-align:middle;"></a>
-      </div>
-      <div><p>&copy; 2026 Eclipse Water Technologies</p></div>
-    </div>
-  </footer>
-</body>
-</html>
+<?php include 'footer.php'; ?>

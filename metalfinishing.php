@@ -1,37 +1,16 @@
-<!DOCTYPE html>
-<html lang="en-CA">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<?php
+$pageTitle = 'Case Study | SDI Optimization for Metal Finishing';
+$pageDescription = 'Eclipse Water Technologies helped a Toronto metal finishing plant reduce resin regeneration frequency through system reconfiguration and flow analysis.';
+include 'header.php';
+?>
 
-  <title>Case Study | SDI Optimization for Metal Finishing</title>
-  <meta name="description" content="Eclipse Water Technologies helped a Toronto metal finishing plant reduce resin regeneration frequency through system reconfiguration and flow analysis." />
-  <meta name="keywords" content="metal finishing water treatment, DI resin optimization, Eclipse Water Technologies, Toronto plating facility, regeneration frequency" />
-  <meta name="author" content="Eclipse Water Technologies" />
-  <link rel="canonical" href="https://eclipsewatertechnologies.com/metalfinishing.php" />
-  <link rel="icon" href="https://eclipsewatertechnologies.com/Eclipselogo2026.png" type="image/png" />
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container" style="padding-top:0.6rem;padding-bottom:0.6rem;">
+    <a href="case-studies.php" class="link">← Case Studies</a>
+  </div>
+</nav>
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Case Study | Resin Optimization for Metal Finishing" />
-  <meta property="og:description" content="Reducing regeneration frequency through system reconfiguration for a high-throughput plating facility in Toronto." />
-  <meta property="og:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
-  <meta property="og:url" content="https://eclipsewatertechnologies.com/metalfinishing.php" />
-  <meta property="og:type" content="article" />
-  <meta property="og:locale" content="en_CA" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Case Study | Resin Optimization for Metal Finishing" />
-  <meta name="twitter:description" content="Reducing regeneration frequency through system reconfiguration for a high-throughput plating facility in Toronto." />
-  <meta name="twitter:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
-  <meta name="twitter:site" content="@EclipseWaterTech" />
-
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-  <?php include 'navbar.php'; ?>
-
-  <section class="hero hero-sub">
+<section class="hero hero-sub">
     <div class="container">
       <h1>Case Study: Resin Optimization for Metal Finishing</h1>
       <p>Reducing regeneration frequency through system reconfiguration for a high-throughput plating facility in Toronto.</p>
@@ -75,30 +54,4 @@
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <strong>Eclipse Water Technologies</strong>
-        <p>Proudly Canadian. Not affected by U.S. tariffs.</p>
-      </div>
-      <div>
-          <a href="services.php">Services</a><br />
-          <a href="industries.php">Industries</a><br />
-          <a href="case-studies.php">Case Studies</a><br />
-          <a href="contact.php">Contact</a>
-      </div>
-      <div class="social-links">
-        <a href="https://www.facebook.com/eclipsewatertech" target="_blank" aria-label="Facebook">
-          <img src="images/icon-facebook.png" alt="Facebook" />
-        </a>
-        <a href="https://www.instagram.com/eclipsewatertech" target="_blank" aria-label="Instagram">
-          <img src="images/icon-instagram.png" alt="Instagram" />
-        </a>
-        <a href="https://www.linkedin.com/company/eclipse-water-technologies" target="_blank" aria-label="LinkedIn">
-          <img src="images/icon-linkedin.png" alt="LinkedIn" />
-        </a>
-      </div>
-    </div>
-  </footer>
-</body>
-</html>
+<?php include 'footer.php'; ?>

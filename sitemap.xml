@@ -31,12 +31,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://eclipsewatertechnologies.com/explore-our-solutions.php</loc>
-    <lastmod>2026-03-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://eclipsewatertechnologies.com/specs.php</loc>
     <lastmod>2026-03-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -153,6 +147,36 @@
   <url>
     <loc>https://eclipsewatertechnologies.com/hidden-contract-costs-water-service.php</loc>
     <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://eclipsewatertechnologies.com/resources.php</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://eclipsewatertechnologies.com/how-sdi-works.php</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://eclipsewatertechnologies.com/sdi-vs-ro-canada.php</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://eclipsewatertechnologies.com/sdi-tank-regeneration-frequency.php</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://eclipsewatertechnologies.com/sdi-troubleshooting.php</loc>
+    <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>

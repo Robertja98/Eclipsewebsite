@@ -1,31 +1,9 @@
-
-<!DOCTYPE html>
-<html lang="en-CA">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Technical Specifications | Eclipse Water Technologies</title>
-  <meta name="description" content="Comprehensive technical specifications for Eclipse Water Technologies DI and filtration systems, including tank models, construction, and operating parameters." />
-  <meta name="keywords" content="DI tank specifications, high flow, water treatment, resin, Eclipse Water Technologies" />
-  <meta name="author" content="Eclipse Water Technologies" />
-  <link rel="canonical" href="https://eclipsewatertechnologies.com/specs.php" />
-  <link rel="icon" href="https://eclipsewatertechnologies.com/Eclipselogo2026.png" type="image/png" />
-  <!-- Open Graph -->
-  <meta property="og:title" content="Technical Specifications | Eclipse Water Technologies" />
-  <meta property="og:description" content="Comprehensive technical specifications for Eclipse Water Technologies DI and filtration systems." />
-  <meta property="og:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
-  <meta property="og:url" content="https://eclipsewatertechnologies.com/specs.php" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="en_CA" />
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Technical Specifications | Eclipse Water Technologies" />
-  <meta name="twitter:description" content="Comprehensive technical specifications for Eclipse Water Technologies DI and filtration systems." />
-  <meta name="twitter:image" content="https://eclipsewatertechnologies.com/Eclipselogo2026.png" />
-  <meta name="twitter:site" content="@EclipseWaterTech" />
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <style>
+<?php
+$pageTitle = 'Technical Specifications | Eclipse Water Technologies';
+$pageDescription = 'Comprehensive technical specifications for Eclipse Water Technologies DI and filtration systems, including tank models, construction, and operating parameters.';
+include 'header.php';
+?>
+<style>
     .accordion {
       border-radius: 18px;
       box-shadow: 0 4px 24px rgba(0,32,64,0.10);
@@ -131,9 +109,6 @@
       }
     }
   </style>
-</head>
-<body>
-  <?php include 'navbar.php'; ?>
   <main>
     <section class="container" style="margin-top:2rem;">
       <h1 style="font-family:'Montserrat',sans-serif;color:#003366;font-size:2rem;margin-bottom:1.5rem;">Technical Specifications</h1>
@@ -141,6 +116,7 @@
       <div class="accordion" id="accordion-tank-models">
         <div class="accordion-header">Tank Models & Capacities <span class="accordion-arrow">▶</span></div>
         <div class="accordion-content">
+          <div class="table-wrap">
           <table class="specs-table">
             <thead>
               <tr>
@@ -186,12 +162,14 @@
               </tr>
             </tbody>
           </table>
+          </div><!-- /.table-wrap -->
           <p class="note">Capacities are nominal and may vary based on feed water quality and application. Contact Eclipse Water Technologies for detailed sizing and selection support.</p>
         </div>
       </div>
       <div class="accordion" id="accordion-operating-params">
         <div class="accordion-header">Recommended Operating Parameters <span class="accordion-arrow">▶</span></div>
         <div class="accordion-content">
+          <div class="table-wrap">
           <table class="specs-table">
             <thead>
               <tr>
@@ -226,50 +204,12 @@
               </tr>
             </tbody>
           </table>
+          </div><!-- /.table-wrap -->
           <p class="note">For optimal performance and safety, do not exceed these values. Consult Eclipse Water Technologies for applications with special requirements.</p>
         </div>
       </div>
     </section>
   </main>
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <strong>Eclipse Water Technologies</strong>
-        <p>Proudly Canadian. Not affected by U.S. tariffs.</p>
-      </div>
-      <div>
-        <a href="services.php">Services</a><br />
-        <a href="industries.php">Industries</a><br />
-        <a href="contact.php">Contact</a>
-      </div>
-      <div class="social-links">
-        <a href="https://www.facebook.com/eclipsewatertechnologies" target="_blank" aria-label="Facebook">
-          <img src="images/icon-facebook.png" alt="Facebook" />
-        </a>
-        <a href="https://www.instagram.com/eclipsewatertechnologies" target="_blank" aria-label="Instagram">
-          <img src="images/icon-instagram.png" alt="Instagram" />
-        </a>
-        <a href="https://www.linkedin.com/company/eclipse-water-technologies" target="_blank" aria-label="LinkedIn">
-          <img src="images/icon-linkedin.png" alt="LinkedIn" />
-        </a>
-      </div>
-      <div style="display: flex; gap: 1.2rem; align-items: center;">
-        <a href="contact.php" class="btn btn-small">Talk to us</a>
-        <a href="https://www.linkedin.com/company/eclipse-water-technologies" target="_blank" aria-label="LinkedIn" style="margin-left:0.5rem;">
-          <img src="linkedin-icon.svg" alt="LinkedIn" style="height:24px;width:24px;vertical-align:middle;">
-        </a>
-        <a href="https://www.instagram.com/eclipsewatertech" target="_blank" aria-label="Instagram">
-          <img src="instagram-icon.svg" alt="Instagram" style="height:24px;width:24px;vertical-align:middle;">
-        </a>
-        <a href="https://www.facebook.com/eclipsewatertech" target="_blank" aria-label="Facebook">
-          <img src="facebook-icon.svg" alt="Facebook" style="height:24px;width:24px;vertical-align:middle;">
-        </a>
-      </div>
-      <div>
-        <p>&copy; 2026 Eclipse Water Technologies</p>
-      </div>
-    </div>
-  </footer>
   <script>
     document.querySelectorAll('.accordion-header').forEach(header => {
       header.addEventListener('click', function() {
@@ -280,5 +220,4 @@
       });
     });
   </script>
-</body>
-</html>
+<?php include 'footer.php'; ?>

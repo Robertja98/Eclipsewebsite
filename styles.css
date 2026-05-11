@@ -1,5 +1,48 @@
 /* Unified Card/Flexbox Styles for All Pages */
 /* Unified Card/Grid Styles for All Pages */
+
+/* Skip to content link (accessibility) */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0.5rem;
+  background: var(--teal);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 6px 6px;
+  font-weight: 700;
+  z-index: 9999;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+.skip-link:focus { top: 0; }
+
+/* Sticky mobile CTA bar */
+.sticky-cta {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--blue);
+  padding: 0.6rem 1rem;
+  z-index: 1000;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.18);
+}
+.sticky-cta-phone {
+  color: #cde9ff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  .sticky-cta { display: flex; }
+  body { padding-bottom: 56px; }
+}
+
 .card, .solution-card, .profile-card, .highlight, .specs-flex-row > section {
   background: #fff;
   border-radius: 14px;
@@ -66,8 +109,21 @@ body{
   color: #1a2a3a !important;
 }
 
-.hero .container h1, .hero .container h2, .hero .container p, .hero .container a {
-  color: #1a2a3a !important;
+/* Reset .container card styling when used inside hero or CTA strips */
+.hero .container,
+.cta-strip .container {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.hero .container,
+.hero .container *,
+.cta-strip .container,
+.cta-strip .container * {
+  color: inherit !important;
 }
 
 .site-header{
@@ -75,9 +131,33 @@ body{
   color:#fff;
 }
 
+/* Hamburger toggle button */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.nav-toggle span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+}
+.nav-toggle.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
 .nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:0.9rem 0}
 .brand{font-family:'Montserrat',sans-serif;font-weight:700;color:#fff;text-decoration:none}
-.nav{list-style:none;display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.nav{list-style:none;display:flex;gap:0.6rem;align-items:center;flex-wrap:wrap}
 .nav a{color:#fff;text-decoration:none;font-weight:600}
 .nav a.active{text-decoration:underline}
 .btn{background:var(--teal);color:#fff;text-decoration:none;padding:0.65rem 1rem;border-radius:6px;display:inline-block}
@@ -139,19 +219,26 @@ body{
 .profile-card h3{font-family:'Montserrat',sans-serif;color:var(--blue);margin-bottom:0.25rem}
 
 .contact-grid{display:grid;grid-template-columns:1fr 0.9fr;gap:1.5rem;margin:2rem auto}
+@media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
 .form{display:grid;gap:0.6rem}
-.form input,.form textarea{border:1px solid var(--silver);border-radius:6px;padding:0.65rem;font:inherit}
+.form label{font-weight:600;font-size:0.95rem;color:var(--blue);margin-bottom:-0.2rem;}
+.form input,.form textarea{border:1px solid var(--silver);border-radius:6px;padding:0.65rem;font:inherit;width:100%;}
+.form input:focus,.form textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(0,153,168,0.15);}
 .form button{border:0;cursor:pointer}
 
 .quote blockquote{font-family:'Merriweather',serif;font-size:1.1rem;text-align:center;padding:1rem 0;color:#1a2a3a}
+
+.breadcrumb { background: #f0f4f8; border-bottom: 1px solid var(--silver); }
+.breadcrumb a { font-size: 0.95rem; }
 
 .site-footer{background:var(--blue);color:#fff;margin-top:2.5rem}
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 1rem;
+  grid-template-columns: 2fr 1.5fr 1.5fr;
+  gap: 0.3rem;
   padding: 1rem 0;
+  align-items: center;
 }
 .site-footer a {
   color: #cde9ff;
@@ -166,22 +253,49 @@ body{
   vertical-align: middle;
 }
 
+@media (max-width: 768px) {
+  .nav-toggle { display: flex; }
+  .nav-wrap { flex-wrap: wrap; align-items: center; }
+  #main-nav {
+    display: none;
+    width: 100%;
+    padding-bottom: 0.5rem;
+  }
+  #main-nav.open { display: block; }
+  .nav {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+  .nav li { width: 100%; }
+  .nav a {
+    display: block;
+    padding: 0.55rem 0.25rem;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+  }
+  .nav a.btn { margin-top: 0.5rem; display: inline-block; width: auto; }
+}
 /* Responsive */
 @media (max-width: 1000px){
   .cards{grid-template-columns:1fr 1fr}
   .profile-grid{grid-template-columns:1fr 1fr}
   .trust-grid{grid-template-columns:1fr 1fr 1fr}
 }
+@media (max-width: 900px){
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
 @media (max-width: 720px){
-  .nav-wrap{flex-direction:column;gap:0.5rem}
   .cards,.profile-grid,.trust-grid{grid-template-columns:1fr}
   .two-col{grid-template-columns:1fr}
-  .contact-grid{grid-template-columns:1fr}
 }
 .logo {
-  height: 48px;            /* Large enough to be noticed */
+  height: 38px;
   width: auto;
-  margin-right: 12px;      /* Space between logo and text */
+  margin-right: 8px;
   vertical-align: middle;
 }
 
@@ -297,4 +411,142 @@ body{
 }
 .contact-strip a:hover {
   color: #fff;
+}
+
+/* =========================================================
+   HOMEPAGE � layout-only wrapper (.section-inner replaces
+   .container so no card-shadow styling leaks into sections)
+   ========================================================= */
+
+.section-inner {
+  width: min(1280px, 96%);
+  margin-inline: auto;
+  padding: 2rem 2vw;
+}
+
+/* Hero tweaks */
+.hero-ctas {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Benefits strip */
+.benefits-strip {
+  background: #f0f7fa;
+  border-top: 3px solid var(--teal);
+  border-bottom: 1px solid #d4e8ef;
+}
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 700px) {
+  .benefits-grid { grid-template-columns: 1fr; }
+}
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+.benefit-icon {
+  font-size: 2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.benefit-item strong {
+  display: block;
+  font-size: 1.05rem;
+  margin-bottom: 0.2em;
+  color: var(--blue);
+}
+.benefit-item p {
+  margin: 0;
+  color: var(--gray);
+  font-size: 0.95rem;
+}
+
+/* Home sections */
+.home-section {
+  background: #fff;
+}
+.home-section--alt {
+  background: #f6fafb;
+}
+.section-heading {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--blue);
+  margin-bottom: 0.3em;
+}
+.section-sub {
+  text-align: center;
+  color: var(--gray);
+  max-width: 640px;
+  margin: 0 auto 1.8rem auto;
+  font-size: 1rem;
+}
+
+/* Home cards grid */
+.home-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+.home-cards--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 900px) {
+  .home-cards--4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 500px) {
+  .home-cards, .home-cards--4 { grid-template-columns: 1fr; }
+}
+.home-card {
+  background: #fff;
+  border: 1px solid #dde6ee;
+  border-radius: 8px;
+  padding: 1.4rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.home-card h3 {
+  font-size: 1.05rem;
+  color: var(--blue);
+  margin: 0 0 0.3em 0;
+}
+.home-card p {
+  margin: 0;
+  color: var(--gray);
+  font-size: 0.95rem;
+  flex: 1;
+}
+.home-card--plain {
+  background: #f6fafb;
+  border-color: #c8dce6;
+}
+a.home-card--link {
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+a.home-card--link:hover {
+  border-color: var(--teal);
+  box-shadow: 0 2px 10px rgba(0,153,168,0.12);
+}
+a.home-card--link h3 {
+  color: var(--blue);
+}
+
+/* btn-outline variant */
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.btn-outline:hover {
+  background: rgba(255,255,255,0.15);
 }

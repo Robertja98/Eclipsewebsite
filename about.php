@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Eclipse Water Technologies</title>
-  <meta name="description" content="Our approach is fast, simple, and friendly. Proudly Canadian water solutions partner with deep engineering and project management expertise." />
-  <link rel="canonical" href="https://eclipsewatertechnologies.com/about.php" />
-  <link rel="icon" href="https://eclipsewatertechnologies.com/Eclipselogo2026.png" type="image/png" />
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-<?php include 'navbar.php'; ?>
+<?php
+$pageTitle = 'About | Eclipse Water Technologies';
+$pageDescription = 'Our approach is fast, simple, and friendly. Proudly Canadian water solutions partner with deep engineering and project management expertise.';
+include 'header.php';
+?>
 
 <section class="hero hero-sub">
-  <div class="container">
+  <div class="section-inner">
     <h1>Fast, simple, and friendly</h1>
     <p>We make your experience positive from the first call. If we can’t immediately ease your concerns, we’ll help you find someone who will — even if it’s our competition.</p>
   </div>
@@ -38,33 +29,45 @@
 
 <section class="container profiles">
   <h2>Meet your water solutions partner</h2>
-  <div class="profile-grid">
+  <div class="two-col" style="margin-top:1rem;">
     <div class="profile-card">
-      <h3>Customer service excellence</h3>
-      <p>Listening first, guiding clearly, and supporting you from consultation to commissioning.</p>
+      <h3>Robert Lee, CET, PMP</h3>
+      <p><strong>Certified Engineering Technologist &amp; Project Management Professional</strong></p>
+      <p style="margin-top:0.6em;">Robert brings hands-on experience in water treatment system design, project delivery, and client support for industrial and commercial facilities across Ontario. He is the direct contact for all technical questions, quotes, and service inquiries.</p>
+      <ul class="checklist" style="margin-top:0.8em;">
+        <li>Certified Engineering Technologist (CET)</li>
+        <li>Project Management Professional (PMP)</li>
+        <li>Specializes in DI systems, ion exchange, RO, and water softening</li>
+        <li>Direct, no-pressure consultation for every client</li>
+      </ul>
+      <p style="margin-top:1em;">
+        <a href="tel:+16473550944" style="font-weight:700;color:var(--teal);">647-355-0944</a> &nbsp;|&nbsp;
+        <a href="mailto:rlee@eclipsewatertechnologies.com" style="color:var(--teal);">rlee@eclipsewatertechnologies.com</a>
+      </p>
     </div>
-    <div class="profile-card">
-      <h3>Engineering expertise</h3>
-      <p>Designing high-performance DI systems tailored for flow, quality, and uptime.</p>
-    </div>
-    <div class="profile-card">
-      <h3>Project management leadership</h3>
-      <p>On time, on spec, on budget — with transparent communication at every step.</p>
+    <div class="profile-grid">
+      <div class="profile-card">
+        <h3>Customer service excellence</h3>
+        <p>Listening first, guiding clearly, and supporting you from consultation to commissioning.</p>
+      </div>
+      <div class="profile-card">
+        <h3>Engineering expertise</h3>
+        <p>Designing high-performance DI systems tailored for flow, quality, and uptime.</p>
+      </div>
+      <div class="profile-card">
+        <h3>Project management leadership</h3>
+        <p>On time, on spec, on budget — with transparent communication at every step.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div><strong>Eclipse Water Technologies</strong></div>
-    <div style="display: flex; gap: 1.2rem; align-items: center;">
-        <a href="contact.php" class="btn btn-small">Talk to us</a>
-      <a href="https://www.linkedin.com/company/eclipse-water-technologies" target="_blank" aria-label="LinkedIn" style="margin-left:0.5rem;"><img src="linkedin-icon.svg" alt="LinkedIn" style="height:24px;width:24px;vertical-align:middle;"></a>
-      <a href="https://www.instagram.com/eclipsewatertech" target="_blank" aria-label="Instagram"><img src="instagram-icon.svg" alt="Instagram" style="height:24px;width:24px;vertical-align:middle;"></a>
-      <a href="https://www.facebook.com/eclipsewatertech" target="_blank" aria-label="Facebook"><img src="facebook-icon.svg" alt="Facebook" style="height:24px;width:24px;vertical-align:middle;"></a>
-    </div>
-    <div><p>&copy; 2026 Eclipse Water Technologies</p></div>
+<section class="strip cta-strip">
+  <div class="container">
+    <h2>Ready to talk water treatment?</h2>
+    <p>No sales pressure. Just straightforward answers and a quote you can trust.</p>
+    <a href="contact.php" class="btn">Get in Touch</a>
   </div>
-</footer>
-</body>
-</html>
+</section>
+
+<?php include 'footer.php'; ?>

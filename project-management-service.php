@@ -1,13 +1,8 @@
-<?php include 'navbar.php'; ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Management Services | Eclipse Water Technologies</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<?php
+$pageTitle = 'Project Management Services | Eclipse Water Technologies';
+$pageDescription = 'Expert project management services for water treatment initiatives. On-time delivery, risk reduction, and transparent reporting by Eclipse Water Technologies.';
+include 'header.php';
+?>
     <section class="hero hero-sub">
         <div class="container">
             <h1>Project Management Services</h1>
@@ -56,6 +51,4 @@
         <a href="contact.php" class="btn">Get Started</a>
     </section>
 
-    <?php include 'Cancellation Page/layout_end.php'; ?>
-</body>
-</html>
+    <?php include 'footer.php'; ?>
