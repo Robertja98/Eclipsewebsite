@@ -1,6 +1,6 @@
 <?php $currentPage = basename($_SERVER['PHP_SELF']); ?>
 <header class="site-header">
-  <div class="container nav-wrap">
+  <div class="nav-wrap">
     <a class="brand" href="index.php">
       <img src="Eclipselogo2026.png" alt="Eclipse Water Technologies Logo" class="logo" />
     </a>

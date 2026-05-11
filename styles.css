@@ -155,7 +155,7 @@ body{
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
-.nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:0.9rem 0}
+.nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:0.9rem 2vw;width:min(1280px,98%);margin-inline:auto;}
 .brand{font-family:'Montserrat',sans-serif;font-weight:700;color:#fff;text-decoration:none}
 .nav{list-style:none;display:flex;gap:0.6rem;align-items:center;flex-wrap:wrap}
 .nav a{color:#fff;text-decoration:none;font-weight:600}
