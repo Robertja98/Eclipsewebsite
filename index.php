@@ -51,7 +51,7 @@ include 'header.php';
       <h1>Ontario's Most Reliable DI Water Service</h1>
       <p style="font-size:1.15rem;margin-top:0.6em;margin-bottom:1.4em;">No hidden costs. No cross-border delays. Fast, local support and transparent pricing for industrial, lab, and healthcare water systems.</p>
       <div class="hero-ctas">
-        <a href="contact.php" class="btn" style="font-size:1.05rem;padding:0.75em 2.2em;">Request a Quote</a>
+        <a href="contact.php" class="btn btn-white" style="font-size:1.05rem;padding:0.75em 2.2em;">Request a Quote</a>
         <a href="services.php" class="btn btn-outline" style="font-size:1.05rem;padding:0.75em 2.2em;">Our Services</a>
       </div>
       <div class="hero-contact" style="margin-top:1.2em;">
@@ -66,7 +66,7 @@ include 'header.php';
   <section class="benefits-strip">
     <div class="section-inner benefits-grid">
       <div class="benefit-item">
-        <span class="benefit-icon">&#127464;&#127462;</span>
+        <span class="benefit-icon">🍁</span>
         <div>
           <strong>Proudly Canadian</strong>
           <p>All regeneration done locally in Ontario &mdash; no border delays, no U.S. tariff exposure.</p>
