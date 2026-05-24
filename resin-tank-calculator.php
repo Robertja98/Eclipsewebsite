@@ -78,59 +78,28 @@
                 </div>
                 <div class="calc-section">
                     <h2>Step 1b: Resin Type</h2>
-                    <label for="resinType"><strong>Resin Type/Condition:</strong></label>
-                    <select id="resinType" style="width:100%;max-width:320px;margin-bottom:0.5em;">
-                        <option value="10000">New Mixed Bed (10,000 grains/ft³)</option>
-                        <option value="9000">Regenerated Mixed Bed (9,000 grains/ft³)</option>
+                    <label for="resinType"><strong>Resin Type:</strong></label>
+                    <select id="resinType" style="width:100%;max-width:360px;margin-bottom:0.5em;">
+                        <option value="12">Mixed Bed (12 kgrn/ft³)</option>
+                        <option value="36">Cation (36 kgrn/ft³)</option>
+                        <option value="23.5">Anion (23.5 kgrn/ft³)</option>
                         <option value="custom">Custom (enter below)</option>
                     </select>
-                    <input type="number" id="customGrains" value="10000" min="1000" max="20000" step="100" style="width:100%;max-width:180px;display:none;margin-top:0.5em;" placeholder="Custom grains/ft³">
-                    <div style="font-size:0.97em;color:#888;">Industry field estimate: 10,000 grains/ft³ (new), 9,000 grains/ft³ (regenerated).</div>
+                    <input type="number" id="customGrains" value="12" min="1" max="50" step="0.1" style="width:100%;max-width:180px;display:none;margin-top:0.5em;" placeholder="Custom kgrn/ft³">
+                    <div style="font-size:0.97em;color:#888;">Capacity values are in kilograins per cubic foot (kgrn/ft³).</div>
                 </div>
                 <div class="calc-section">
-                    <h2>Step 2: Water Quality (Optional)</h2>
-                    <label for="conductivity">Feedwater Conductivity (μS/cm)</label>
-                    <span class="info">If you have a water quality report, enter the conductivity. Otherwise, leave the default.</span>
-                    <input type="number" id="conductivity" value="75" min="0" step="0.1">
-                    <div style="margin:1.2rem 0 0.5rem 0;">
-                        <div class="info" style="margin-bottom:0.5em;">
-                            <strong>Advanced Options:</strong> For most users, the default water quality values are accurate. If you have a water analysis or lab report, you can enter your own TDS, CO₂, or grains loading values for a more precise calculation.
-                        </div>
-                        <button type="button" id="toggleAdvanced" style="margin-bottom:0.5em; background:#0099A8; color:#fff; border:none; border-radius:4px; padding:0.5em 1.2em; font-weight:600; font-size:1em; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.07); transition:background 0.2s;">Show Advanced Options</button>
-                    </div>
-                    <div id="advancedOptions" style="display:none;background:#fafdff;border:1px solid #d9eff2;border-radius:8px;padding:1rem;margin-bottom:1rem;">
-                        <table style="width:100%;max-width:600px;margin-bottom:0.5em;border-collapse:separate;border-spacing:0 0.5em;">
-                            <tr>
-                                <td style="width:38%;vertical-align:top;font-weight:600;">Feedwater TDS (mg/L)</td>
-                                <td style="width:62%;vertical-align:top;">
-                                    <input type="number" id="tds" value="50" min="0" step="0.1" style="width:100%;max-width:120px;">
-                                    <div style="font-size:0.97em;color:#888;">TDS (Total Dissolved Solids) is usually about 0.67 × conductivity. You can override this if you have a lab value.</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="vertical-align:top;font-weight:600;">Feedwater CO₂ (mg/L)</td>
-                                <td style="vertical-align:top;">
-                                    <input type="number" id="co2" value="2" min="0" step="0.1" style="width:100%;max-width:120px;">
-                                    <div style="font-size:0.97em;color:#888;">CO₂ is typically 1–5 mg/L in municipal water. If unsure, leave as default.</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="vertical-align:top;font-weight:600;">Grains Loading (grains/USG)</td>
-                                <td style="vertical-align:top;">
-                                    <input type="number" id="grainsLoading" value="3.0" min="0.1" step="0.01" style="width:100%;max-width:120px;">
-                                    <div style="font-size:0.97em;color:#888;">Calculated as (TDS + CO₂) / 17.1. Lower grains loading means higher purity water and less capacity per tank.</div>
-                                </td>
-                            </tr>
-                        </table>
-                        <div style="font-size:0.97em;color:#0099A8;margin-top:0.7em;">Lower conductivity (higher purity) water will reduce grains loading and tank capacity. Adjust grains loading if your water is purer than typical feedwater.</div>
-                    </div>
-                    <div id="assumptionsBox" style="background:#fafdff;border:1px solid #d9eff2;border-radius:8px;padding:1rem;margin-bottom:1rem;">
-                        <strong>Assumptions (edit in Advanced Options):</strong>
+                    <h2>Step 2: Water Quality</h2>
+                    <label for="conductivity">Feedwater Conductivity (micromhos/cm or μS/cm)</label>
+                    <span class="info">This method estimates loading using: grains/gal = conductivity ÷ 34.</span>
+                    <input type="number" id="conductivity" value="250" min="0" step="0.1">
+                    <div id="assumptionsBox" style="background:#fafdff;border:1px solid #d9eff2;border-radius:8px;padding:1rem;margin:1rem 0;">
+                        <strong>Assumptions:</strong>
                         <ul style="margin:0 0 0 1.2em;">
-                            <li>TDS: <span id="assumeTDS">50</span> mg/L</li>
-                            <li>CO₂: <span id="assumeCO2">2</span> mg/L</li>
-                            <li>Grains Loading: <span id="assumeGrains">3.0</span> grains/USG</li>
-                            <li>Resin capacity: <span id="assumeResin">10,000</span> grains/ft³</li>
+                            <li>pH range: 6–8</li>
+                            <li>Use 90% of resin capacity</li>
+                            <li>Loading: <span id="assumeGrains">7.35</span> grains/gal (conductivity ÷ 34)</li>
+                            <li>Resin capacity: <span id="assumeResin">12</span> kgrn/ft³</li>
                         </ul>
                     </div>
                 </div>
@@ -140,45 +109,29 @@
                 </div>
             </form>
             <div class="calc-results" id="results" style="display:none;"></div>
+            <div class="calc-disclaimer" style="margin-top:1rem;font-size:0.95em;color:#666;">
+                This calculator provides an estimate only. For an accurate assessment, a detailed water analysis and application review are required.
+            </div>
             <button id="downloadTXT" style="display:none;margin-top:1.2em;background:#0099A8;color:#fff;border:none;border-radius:4px;padding:0.5em 1.2em;font-weight:600;font-size:1em;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.07);transition:background 0.2s;">Download TXT Report</button>
         </div>
     <!-- PDF logic removed, replaced with TXT download logic -->
     <script>
-                // Auto-calculate TDS from conductivity unless user overrides in advanced
-                function updateTDSfromConductivity() {
-                    const cond = parseFloat(document.getElementById('conductivity').value);
-                    const tdsField = document.getElementById('tds');
-                    if (tdsField && document.getElementById('advancedOptions').style.display === 'none') {
-                        tdsField.value = (cond * 0.67).toFixed(1);
-                        updateAssumptions();
-                    }
-                }
-                document.getElementById('conductivity').addEventListener('input', updateTDSfromConductivity);
-
-        // Advanced Options toggle
-        document.getElementById('toggleAdvanced').onclick = function() {
-            const adv = document.getElementById('advancedOptions');
-            adv.style.display = adv.style.display === 'none' ? 'block' : 'none';
-            this.textContent = adv.style.display === 'block' ? 'Hide Advanced Options' : 'Show Advanced Options';
-        };
-
         // Update assumptions box live
         function updateAssumptions() {
-                document.getElementById('conductivity').value && (document.getElementById('assumeTDS').textContent = (parseFloat(document.getElementById('conductivity').value) * 0.67).toFixed(1));
-            document.getElementById('assumeTDS').textContent = document.getElementById('tds').value;
-            document.getElementById('assumeCO2').textContent = document.getElementById('co2').value;
-            document.getElementById('assumeGrains').textContent = document.getElementById('grainsLoading').value;
+            const conductivity = parseFloat(document.getElementById('conductivity').value) || 0;
+            const grainsLoading = conductivity > 0 ? (conductivity / 34).toFixed(2) : '0.00';
+            document.getElementById('assumeGrains').textContent = grainsLoading;
             // Update resin capacity
             let resinType = document.getElementById('resinType').value;
-            let resinGrains = 10000;
+            let resinKgrn = 12;
             if (resinType === 'custom') {
-                resinGrains = parseFloat(document.getElementById('customGrains').value) || 10000;
+                resinKgrn = parseFloat(document.getElementById('customGrains').value) || 12;
             } else {
-                resinGrains = parseFloat(resinType);
+                resinKgrn = parseFloat(resinType);
             }
-            document.getElementById('assumeResin').textContent = resinGrains;
+            document.getElementById('assumeResin').textContent = resinKgrn;
         }
-        ['tds','co2','grainsLoading','resinType','customGrains'].forEach(id => {
+        ['conductivity','resinType','customGrains'].forEach(id => {
             document.addEventListener('input', function(e) {
                 if (e.target && e.target.id === id) updateAssumptions();
             });
@@ -186,6 +139,7 @@
                 if (e.target && e.target.id === id) updateAssumptions();
             });
         });
+        updateAssumptions();
 
         // Show/hide custom grains input
         document.getElementById('resinType').addEventListener('change', function() {
@@ -198,39 +152,37 @@
         });
 
         // Show grains loading formula and calculation
-        function grainsLoadingFormula(tds, co2) {
-            return `Grains Loading = (TDS + CO₂) / 17.1 = (${tds} + ${co2}) / 17.1`;
+        function grainsLoadingFormula(conductivity) {
+            return `Grains Loading = Conductivity / 34 = ${conductivity} / 34`;
         }
 
         document.getElementById('tankCalc').onsubmit = function(e) {
             e.preventDefault();
             // Get values
-            let tds = parseFloat(document.getElementById('tds').value);
-            let co2 = parseFloat(document.getElementById('co2').value);
-            let grainsLoading = parseFloat(document.getElementById('grainsLoading') ? document.getElementById('grainsLoading').value : 3.0);
+            let conductivity = parseFloat(document.getElementById('conductivity').value);
             let numTanks = parseInt(document.getElementById('numTanks').value) || 1;
             let tankModel = parseFloat(document.getElementById('tankModel').value);
             let tankLabel = document.getElementById('tankModel').options[document.getElementById('tankModel').selectedIndex].text;
             let flowRate = parseFloat(document.getElementById('flowRate').value);
             let hours = parseFloat(document.getElementById('hours').value);
-            // Resin grains/ft³ selection (fixes ReferenceError)
-            let resinGrains = 10000;
+            // Resin capacity in kgrn/ft³
+            let resinKgrn = 12;
             const resinType = document.getElementById('resinType').value;
             if (resinType === 'custom') {
-                resinGrains = parseFloat(document.getElementById('customGrains').value) || 10000;
+                resinKgrn = parseFloat(document.getElementById('customGrains').value) || 12;
             } else {
-                resinGrains = parseFloat(resinType);
+                resinKgrn = parseFloat(resinType);
             }
-            // If advanced is hidden, recalc grains loading from TDS/CO2
-            if (document.getElementById('advancedOptions').style.display === 'none') {
-                grainsLoading = ((tds + co2) / 17.1).toFixed(2);
-            }
-            // In series: only one tank's capacity is used for service interval
-            let singleTankCapacity = ((resinGrains * tankModel) / grainsLoading).toFixed(1);
+            const grainsLoading = conductivity > 0 ? (conductivity / 34).toFixed(2) : 0;
+            const usableCapacityFactor = 0.9;
+            const gallonsPerFt3 = conductivity > 0
+                ? ((resinKgrn * usableCapacityFactor * 34 * 1000) / conductivity)
+                : 0;
+            let singleTankCapacity = (gallonsPerFt3 * tankModel).toFixed(1);
             let totalCapacity = (singleTankCapacity * numTanks).toFixed(1);
             const gallonsPerDay = (flowRate * 60 * hours).toFixed(0);
             // Days to Exchange = Gallons Capacity / Gallons Per Day
-            const daysToExchange = ((singleTankCapacity / gallonsPerDay) * numTanks).toFixed(1);
+            const daysToExchange = gallonsPerDay > 0 ? (totalCapacity / gallonsPerDay).toFixed(1) : 0;
             document.getElementById('results').style.display = 'block';
             document.getElementById('results').innerHTML = `
                 <strong>Selected Tank Model:</strong> ${tankLabel}<br>
@@ -238,13 +190,13 @@
                 <strong>Single Tank Capacity:</strong> ${parseInt(singleTankCapacity).toLocaleString()} USG<br>
                 <strong>Total System Capacity:</strong> ${parseInt(totalCapacity).toLocaleString()} USG<br>
                 <strong>Flow Rate Used for Calculation:</strong> ${flowRate} GPM<br>
-                <strong>Estimated Days to Exchange (per tank):</strong> ${daysToExchange} days<br>
+                <strong>Estimated Days to Exchange:</strong> ${daysToExchange} days<br>
                 <span style="font-size:0.97em;color:#0099A8;">Days to Exchange = Gallons Capacity / Gallons Per Day</span><br>
                 <hr style="margin:1em 0;">
                 <strong>Grains Loading Calculation:</strong><br>
-                <span style="font-size:0.98em;">${grainsLoadingFormula(tds, co2)} = <strong>${grainsLoading}</strong> grains/USG</span><br>
-                <span style="font-size:0.98em;color:#0099A8;">TDS (mg/L) ≈ Conductivity (μS/cm) × 0.67</span><br>
-                <span style="font-size:0.98em;color:#0099A8;">Assumptions: TDS ${tds} mg/L, CO₂ ${co2} mg/L, Grains Loading ${grainsLoading} grains/USG</span>
+                <span style="font-size:0.98em;">${grainsLoadingFormula(conductivity)} = <strong>${grainsLoading}</strong> grains/gal</span><br>
+                <span style="font-size:0.98em;color:#0099A8;">Assumptions: pH 6–8, 90% capacity used</span><br>
+                <span style="font-size:0.95em;color:#666;">Estimate only. Accurate assessment requires detailed water analysis and application review.</span>
             `;
             // Show TXT button
             const txtBtn = document.getElementById('downloadTXT');
@@ -255,38 +207,35 @@
                 txt += 'Eclipse Water Technologies SDI Tank Sizing Report\n';
                 txt += 'Date: ' + new Date().toLocaleString() + '\n\n';
                 txt += 'Inputs:\n';
-                txt += `Feedwater Conductivity: ${document.getElementById('conductivity').value} μS/cm\n`;
-                txt += `Feedwater TDS: ${tds} mg/L\n`;
-                txt += `Feedwater CO2: ${co2} mg/L\n`;
-                txt += `Grains Loading: ${grainsLoading} grains/USG\n`;
+                txt += `Feedwater Conductivity: ${document.getElementById('conductivity').value} micromhos/cm\n`;
+                txt += `Grains Loading: ${grainsLoading} grains/gal\n`;
                 txt += `Tank Model: ${tankLabel}\n`;
                 txt += `Flow Rate: ${flowRate} USGPM\n`;
                 txt += `Hours per Day: ${hours}\n`;
                 txt += `Number of Tanks (in series): ${numTanks}\n\n`;
                 txt += 'Calculation Steps:\n';
                 txt += '1. Grains Loading Formula:\n';
-                txt += `   Grains Loading = (TDS + CO2) / 17.1 = (${tds} + ${co2}) / 17.1 = ${grainsLoading} grains/USG\n`;
+                txt += `   Grains Loading = Conductivity / 34 = ${conductivity} / 34 = ${grainsLoading} grains/gal\n`;
                 txt += '2. Single Tank Capacity Formula:\n';
-                txt += `   Single Tank Capacity = (Resin Volume x ${resinGrains}) / Grains Loading = (${tankModel} x ${resinGrains}) / ${grainsLoading} = ${parseInt(singleTankCapacity).toLocaleString()} USG\n`;
+                txt += `   Gallons per ft³ = (Resin Capacity x 0.90 x 34 x 1000) / Conductivity\n`;
+                txt += `   Gallons per ft³ = (${resinKgrn} x 0.90 x 34 x 1000) / ${conductivity} = ${parseInt(gallonsPerFt3).toLocaleString()} USG/ft³\n`;
+                txt += `   Single Tank Capacity = Gallons per ft³ x Resin Volume = ${parseInt(gallonsPerFt3).toLocaleString()} x ${tankModel} = ${parseInt(singleTankCapacity).toLocaleString()} USG\n`;
                 txt += '3. Days to Exchange (per tank):\n';
                 txt += `   Gallons per Day = Flow Rate x 60 x Hours = ${flowRate} x 60 x ${hours} = ${gallonsPerDay} USG/day\n`;
-                txt += `   Days to Exchange = Gallons Capacity / Gallons per Day = ${parseInt(singleTankCapacity).toLocaleString()} / ${gallonsPerDay} = ${daysToExchange} days\n\n`;
+                txt += `   Days to Exchange = Gallons Capacity / Gallons per Day = ${parseInt(totalCapacity).toLocaleString()} / ${gallonsPerDay} = ${daysToExchange} days\n\n`;
                 txt += 'Results:\n';
                 txt += `Selected Tank Model: ${tankLabel}\n`;
                 txt += `Number of Tanks (in series): ${numTanks}\n`;
                 txt += `Single Tank Capacity: ${parseInt(singleTankCapacity).toLocaleString()} USG\n`;
                 txt += `Total System Capacity: ${parseInt(totalCapacity).toLocaleString()} USG\n`;
                 txt += `Flow Rate Used for Calculation: ${flowRate} GPM\n`;
-                txt += `Estimated Days to Exchange (per tank): ${daysToExchange} days\n\n`;
+                txt += `Estimated Days to Exchange: ${daysToExchange} days\n\n`;
                 txt += 'Assumptions:\n';
-                txt += '• TDS (mg/L) = Conductivity (μS/cm) x 0.67\n';
-                if (resinGrains === 10000) {
-                    txt += '• Resin capacity (new mixed bed): 10,000 grains/ft³\n';
-                } else if (resinGrains === 9000) {
-                    txt += '• Resin capacity (regenerated mixed bed): 9,000 grains/ft³\n';
-                } else {
-                    txt += `• Resin capacity (custom): ${resinGrains.toLocaleString()} grains/ft³\n`;
-                }
+                txt += '• pH range: 6–8\n';
+                txt += '• Use 90% of resin capacity\n';
+                txt += '• Grains/gal = conductivity ÷ 34\n';
+                txt += `• Resin capacity: ${resinKgrn} kgrn/ft³\n`;
+                txt += '• Estimate only; accurate assessment requires detailed water analysis and application review\n';
                 txt += 'Eclipse Water Technologies\n';
                 txt += 'Website: eclipsewatertechnologies.com\n';
                 txt += 'Phone: 647 355 0944\n';
